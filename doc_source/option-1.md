@@ -72,9 +72,9 @@ You now create a rule that says "When CloudWatch receives any event from aws\.me
 
 1. In **Topic**, choose the topic you created, for example, "MediaLive\_alert"\.
 
-1. Choose **Configure details**
-
 1. In **Configure input**, choose **Matched event**\.
+
+1. Choose **Configure details**
 
 1. Type a name and optional description, then choose **Create rule**\. 
 
