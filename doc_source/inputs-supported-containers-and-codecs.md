@@ -1,5 +1,7 @@
 # Supported Codecs for Inputs<a name="inputs-supported-containers-and-codecs"></a>
 
+The following table lists the codecs that MediaLive supports for source content\.
+
 
 | Container | Video Codecs | Audio Codecs | 
 | --- | --- | --- | 

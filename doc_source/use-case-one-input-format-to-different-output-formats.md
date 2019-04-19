@@ -1,4 +1,4 @@
-# Use Case: One Input Format Converted to One Different Format in One Output<a name="use-case-one-input-format-to-different-output-formats"></a>
+# Use Case B: One Input Format Converted to One Different Format in One Output<a name="use-case-one-input-format-to-different-output-formats"></a>
 
 The input is set up with one format of captions and two or more languages\. You want to convert the captions to a different format in the output\. You want to produce only one type of output and include all the languages in that output\.
 

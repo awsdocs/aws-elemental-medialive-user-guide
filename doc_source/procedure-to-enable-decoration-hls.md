@@ -2,9 +2,9 @@
 
 Manifest decoration is enabled at the output group level, which means that the manifests for all outputs in that group include instructions based on the SCTE\-35 content\.
 
+**To enable decoration**
 
-
-1. In the channel that you are creating, make sure that you have set the ad avail mode\. See [[ERROR] BAD/MISSING LINK TEXT](getting-ready-set-the-ad-avail-mode.md)\.
+1. In the channel that you are creating, make sure that you have set the ad avail mode\. See [Getting Ready: Set the Ad Avail Mode](getting-ready-set-the-ad-avail-mode.md)\.
 
 1. In the navigation pane, find the desired HLS output group\. 
 

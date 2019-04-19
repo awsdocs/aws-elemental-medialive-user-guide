@@ -1,13 +1,11 @@
-# Output Types and Features<a name="processing-applicability-by-output-type"></a>
+# Supported Features by Output Type<a name="processing-applicability-by-output-type"></a>
 
-The table below summarizes which features apply to the various types of output\. 
+This section describes which SCTE\-35 features apply to the various types of output\. 
 
-
-****  
-
-| Output | Passthrough in TS Outputs | Manifest Decoration | Blanking | See | 
-| --- | --- | --- | --- | --- | 
-| Archive  |  Applicable   | Not applicable\. | Applicable | [[ERROR] BAD/MISSING LINK TEXT](archive-output-with-mpeg-2-container.md) | 
-| HLS |  Applicable   |  Applicable  | Applicable | [[ERROR] BAD/MISSING LINK TEXT](hls-output.md) | 
-| Microsoft Smooth | Not applicable | Applicable | Applicable | [[ERROR] BAD/MISSING LINK TEXT](ms-smooth-output.md) | 
-| UDP |  Applicable    | Not applicable | Applicable | [[ERROR] BAD/MISSING LINK TEXT](udp-ts-output.md) | 
+**Topics**
++ [Archive Output with MPEG\-2 Container](archive-output-with-mpeg-2-container.md)
++ [Frame Capture Output](framecapture-output.md)
++ [HLS Output](hls-output.md)
++ [MediaPackage Output](mediapackage-output.md)
++ [Microsoft Smooth Output](ms-smooth-output.md)
++ [UDP Output](udp-ts-output.md)

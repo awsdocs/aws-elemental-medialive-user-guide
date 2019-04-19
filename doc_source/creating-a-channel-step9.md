@@ -1,7 +1,9 @@
-# Step 9: Save<a name="creating-a-channel-step9"></a>
+# Step 10: Save the Channel<a name="creating-a-channel-step9"></a>
 
-You can save the channel only when you have configured and created everything you require\. As soon as you save, the configuration of the channel is validated and messages are displayed for any errors\. You cannot save a draft and you cannot save a channel that contains error messages\.
+To save \(create\) the channel, choose **Create channel** in the navigation pane\. 
 
-At the bottom of the navigation pane, choose Create Channel\. 
+You can save the channel only after you have configured and created everything that you require\. As soon as you save the channel, MediaLive validates the configuration of the channel and displays messages for any errors\. You can't save a draft of the channel, and you can't save a channel that contains error messages\.
 
-The Channel panel reappears and shows the newly created channel in the list of channels\. The State changes to Creating, then Ready\.
+To find your newly created channel, in the navigation pane, choose **Channel**\. \(The navigation pane might be collapsed\. To open it, choose the menu icon in the upper\-left corner of the console\)\.
+
+The **Channel** pane appears and shows the newly created channel in the list of channels\. The state changes to **Creating**, and then to **Ready**\.

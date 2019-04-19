@@ -1,6 +1,6 @@
 # Microsoft Smooth Output<a name="ms-smooth-output"></a>
 
-Microsoft Smooth output does not support passthrough of the SCTE\-35 messages, but does support instructions in the sparse track\. Therefore, the processing options that make sense are:
+Microsoft Smooth output does not support passthrough of the SCTE\-35 messages, but does support instructions in the sparse track\. The following table shows the valid processing options\.
 
 
 ****  

@@ -1,15 +1,16 @@
-# Step 8: Set up the Captions Encodes<a name="creating-a-channel-step8"></a>
+# Step 9: Set up the Captions Encodes<a name="creating-a-channel-step8"></a>
 
-The output section for every type of output group \(Archive, HLS, Microsoft Smooth, and UDP\) contains a Stream settings section\. In the Stream settings section, you create "encodes" for the video, audio, and captions in the output and specify the details of how you want these assets encoded\. 
+The output section for every type of output group \(Archive, HLS, MediaPackage, Frame Capture, Microsoft Smooth, and UDP\) contains a **Stream settings** section\. In this section, you create [encodes](channels.md#encode) for the video, audio, and captions in the output and specify the details of how you want these assets encoded\. 
 
-Before setting up captions, see [[ERROR] BAD/MISSING LINK TEXT](supported-captions.md)\. There are rules about:
+Note that a Frame Capture output group contains video but doesn't contain audio or captions\.
 
-1. What caption formats can be generated, depending on the format of the input captions and container\. For example, ARIB can only be generated from ARIB input captions, which can only appear in a TS input\.
+Before setting up captions, see [Reference: Supported Captions](supported-captions.md)\. There are rules about the following:
++ What captions formats can be generated, depending on the format of the input captions and container\. For example, ARIB can be generated only from ARIB input captions, which can appear only in a TS input\.
++ What captions type \(embedded, object, sidecar\) applies to which captions format\. For example, DVB\-Sub is an object type of format\.
++ Which format can be included in which type of output asset\. For example, HLS can take WebVTT \(a sidecar type\), 608 \(embedded\), and burn\-in\.
 
-1. What caption type \(embedded, object, sidecar\) apply to which caption format\. For example, DVB\-Sub is an object type of format\.
+**To set up the captions encodes in the outputs**
 
-1. Which format can be included in which type of output asset\. For example, HLS can take Web\-VTT \(a sidecar type\), 608 \(embedded\) and burn\-in\.
+1. For detailed information about setting up captions, see [Working with Captions](captions.md)\.
 
-For detailed information on setting up captions, see [[ERROR] BAD/MISSING LINK TEXT](captions.md)\.
-
-Continue setting up the audio encodes, video encodes, and captions encodes for all outputs in all output groups\. When done, go to save the channel\.
+1. After you set up the captions for one output, continue setting up the [audio encodes](creating-a-channel-step7.md), [video encodes](creating-a-channel-step6.md), and captions encodes for all outputs in all output groups\. When you have finished with the encodes for all outputs, go to [save the channel](creating-a-channel-step9.md)\.

@@ -1,6 +1,6 @@
 # Step 3: Match Formats to Categories<a name="categories-captions"></a>
 
-There are different procedures to follow to create caption encodes in the output\. The correct procedure depends on the "category" that of the output captions belongs to \. There are five categories of captions, described in the following table\.
+There are different procedures to follow to create captions encodes in the output\. The correct procedure depends on the "category" that the output captions belong to\. There are five categories of captions, described after the table\. 
 
 On the list of outputs that you have created, make a note of the category that each captions option belongs to\. 
 
@@ -12,38 +12,47 @@ On the list of outputs that you have created, make a note of the category that e
 |  DVB\-Sub  |  Object  | 
 |  Embedded  |  Embedded  | 
 |  Embedded\+SCTE\-20  |  Embedded   | 
+|  RTMP CaptionInfo  |  Object  | 
 |  SCTE\-20\+Embedded  |  Embedded  | 
 | SCTE\-27 | Object | 
 | SMPTE\-TT | Stream in Microsoft Smooth | 
 |  Teletext   |  Object  | 
 |  TTML  |  Sidecar  | 
-|  WebVTT  |  Sidecar  | 
+|  Web\-VTT  |  Sidecar  | 
 
 For example, your list of outputs might now look like this: 
-
-+ Microsoft Smooth output with TTML captions \(sidecar\) in Czech\.
-
-+ Microsoft Smooth output with TTML captions \(sidecar\) in Polish\.
-
-+ HLS output with Web\-VTT captions \(sidecar\) in Czech\.
-
-+ HLS output with Web\-VTT captions \(sidecar\) in Polish\.
++ Microsoft Smooth output with TTML captions \(sidecar\) in Czech
++ Microsoft Smooth output with TTML captions \(sidecar\) in Polish
++ HLS output with Web\-VTT captions \(sidecar\) in Czech
++ HLS output with Web\-VTT captions \(sidecar\) in Polish
 
 ## Embedded in Video<a name="embedded-in-video"></a>
 
 The captions are carried inside the video encode, which is itself in an output in the output group\. There is only ever one captions asset within that video encode, although that asset might contain captions for several languages\. 
 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/caption_categories_embedded.png)
+
 ## Captions Object<a name="captions-object"></a>
 
-The captions are in their own "captions encode" in an output in the output group\. They are not part of the video encode\. However, they are in the same output as their corresponding video and audio encodes\. There might be several captions encodes in the output, for example, for different languages\. 
+All the captions encodes for a given output group are in the same output as the corresponding video and audio\. 
 
-## Sidecar<a name="sidecar"></a>
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/caption_categories_object.png)
 
-The captions are each in their own output in the output group, separate from the output that contains the video and audio\. Each captions output contains only one captions asset \(file\)\. The output group might contain several "captions\-only" outputs, for example, one for each language in the output group\.
+## Sidecar<a name="captions-sidecar"></a>
 
-## SMPTE\-TT in Microsoft Smooth<a name="stream-in-mss"></a>
+Each captions encode for a given output group is in its own "captions\-only" output\. The output group can contain more than one captions output, for example, one for each language\. 
 
-The captions are handled as a separate stream in Microsoft Smooth\. 
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/caption_categories_sidecar.png)
+
+Each captions\-only output becomes a separate file in the packaged output\.
+
+## Stream<a name="captions-stream"></a>
+
+Each captions encode for a given output group is in its own "captions\-only" output\. The output group can contain more than one captions output, for example, one for each language\.
+
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/caption_categories_stream.png)
+
+Each captions\-only output becomes a separate stream in the packaged output\.
 
 ## Burn\-in<a name="burnin"></a>
 

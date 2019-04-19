@@ -1,3 +1,3 @@
 # Supported Formats<a name="supported-formats"></a>
 
-AWS Elemental MediaLive supports specific formats in inputs and specific formats in outputs\. See [[ERROR] BAD/MISSING LINK TEXT](general-information-supported-formats.md) for a table that lists the supported captions formats, with a reference to the standard that defines that format\. This table specifies whether the format is supported as input or output or both\. 
+AWS Elemental MediaLive supports specific formats in inputs and specific formats in outputs\. See [General Information About Supported Formats ](general-information-supported-formats.md) for a table that lists the supported captions formats, with a reference to the standard that defines that format\. The table specifies whether the format is supported as input or output or both\. 

@@ -2,42 +2,48 @@
 
 A channel contains the details that instruct AWS Elemental MediaLive how to transcode \(decode and encode\) and package your input into specific outputs\. 
 
-To create a channel you must provide details about inputs, about one or more output groups and their destinations, about the outputs in each output group, and about the video, audio and caption encodes in each output\.
+To create a channel, you provide details about inputs, about one or more output groups and their destinations, about the outputs in each output group, and about the video, audio, and caption encodes in each output\.
 
 There are three ways to create a channel: 
++ **From scratch\.** The **Create** form on the MediaLive console contains some fields that display system defaults and other fields that are empty\. You can create a channel from scratch by modifying the system defaults and by completing the appropriate empty fields\. For more information, see [Creating a Channel from Scratch](creating-channel-scratch.md)\.
++ **Using a built\-in template or custom template\.** You can use a template to create a channel, and reuse the template to create more channels\. For more information, see [Creating a Channel from a Template](creating-channel-template.md)\. 
++ **By cloning an existing channel\.** You can clone an existing channel, and then edit the settings for the new \(cloned\) channel\. For more information, see [Creating a Channel by Cloning](creating-channel-clone.md)\.
 
-+ **From scratch\.** The Create form contains some fields that display system defaults and contains other fields that are empty\. You can modify system defaults and complete empty fields as desired\. See [[ERROR] BAD/MISSING LINK TEXT](creating-channel-scratch.md)\.
+The procedures in the following topics show how to create a channel by using a template or by cloning\. Before you use the procedures, you should understand how to create a channel from scratch\. For more information, see [Creating a Channel from Scratch](creating-channel-scratch.md)\.
 
-+ **Using a built\-in template or custom template\.** See below\. 
+**Topics**
++ [About Templates](#about-templates)
++ [About Cloning](#about-cloning)
++ [Creating a Channel from a Template](creating-channel-template.md)
++ [Creating a Channel by Cloning](creating-channel-clone.md)
++ [Creating a Custom Template](creating-custom-template.md)
 
-+ **By cloning an existing channel\. **See below\. 
+## About Templates<a name="about-templates"></a>
 
-The following procedures assume that you are familiar with all the steps in creating a channel from scratch\. See [[ERROR] BAD/MISSING LINK TEXT](creating-channel-scratch.md)\.
+### Using Built\-in Templates<a name="using-builtin-templates"></a>
 
-## About Templates and Clones<a name="about-templates-and-clones"></a>
-
-### About Built\-in Templates<a name="about-builtin-templates"></a>
-
-AWS Elemental MediaLive includes built\-in templates\. Each template is displayed in the console list with a name and description\. Each template includes data for output groups and outputs, and most importantly, for encoding video to meet specific use cases \(as specified in the template description\)\. 
+MediaLive includes built\-in templates that you can access on the console\. Each template includes data for output groups and outputs, and most importantly, data for encoding video to meet specific use cases \(as specified in the template description\)\. 
 
 When you use a built\-in template, all sections of the **Create channel** page are populated with data except for the inputs and output destinations sections\. 
 
-You can modify existing fields and complete empty fields as desired\.
+Even though the templates are built\-in, you can choose to edit the existing fields and complete the empty fields\.
 
-### About Custom Templates<a name="about-custom-templates"></a>
+### Using Custom Templates<a name="using-custom-templates"></a>
 
-You or another person in your organization may have created custom templates\. See [[ERROR] BAD/MISSING LINK TEXT](creating-custom-template.md)\. A template may contain nearly all the data required to create a complete channel, or it may contain only portions of the data\.
+You or another person in your organization may have created custom templates\. A custom template might contain nearly all the data that is required to create a complete channel, or it might contain only portions of the data\. To create a custom template, see [Creating a Custom Template](creating-custom-template.md)\. 
 
-You need to obtain the templates you need and put them in a folder on the computer where you are working on the AWS Elemental MediaLive console\. This folder is the "custom template location"\. You perform this task in your computer's filesystem\. 
+Typically, templates are created in order to be shared among different users\.
 
-When you use a custom template, all sections of the **Create channel** page are populated with data from the JSON file, except for the input data: even if the template includes input data, that data will not be pulled into the **Create channel** page\. 
+If your organization uses templates, you must obtain the templates you will use from the person who created the templates\. You must store them in a folder on the computer where you are working on the MediaLive console\. This folder is the "custom template location\." You perform this task in your computer's filesystem, outside of MediaLive\. 
 
-You can modify existing fields and complete empty fields as desired\.
+When you use a custom template, MediaLive populates all sections of the **Create channel** page are populated with data from the template, except for the input data\. Even if the template includes input data, that data will not be pulled into the **Create channel** page\. 
 
-### About Cloning<a name="about-cloning"></a>
+You can edit the existing fields and complete the empty fields as needed\.
 
-Cloning lets you use an existing channel as the template for a new channel\. 
+## About Cloning<a name="about-cloning"></a>
 
-When you clone an existing channel, all sections of the **Create channel** page are populated with the data from the cloned channel, except for the input data, which is always left blank\. 
+Cloning lets you use an existing channel as the basis for a new channel\. 
 
-You can modify existing fields and complete empty fields as desired\.
+When you clone an existing channel, all sections of the **Create channel** page are populated with the data from the cloned channel, except for the input data\. Input data is always left blank\. 
+
+You can edit the existing fields and complete the empty fields as needed\.

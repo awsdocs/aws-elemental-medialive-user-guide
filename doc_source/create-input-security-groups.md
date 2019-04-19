@@ -1,8 +1,10 @@
 # Creating an Input Security Group<a name="create-input-security-groups"></a>
 
-To create an input security group:
+You create an input security group and then attach it to a "push" input when you create or edit that input\. 
 
-1. Open the AWS Elemental MediaLive console at https://console\.aws\.amazon\.com/medialive?region="region"\.
+**To create an input security group**
+
+1. Open the MediaLive console at [https://console\.aws\.amazon\.com/medialive/](https://console.aws.amazon.com/medialive/)\.
 
 1. In the navigation pane, choose **Input security groups**\. 
 
@@ -15,5 +17,7 @@ To create an input security group:
    192\.0\.2\.0/24
 
    192\.0\.2\.111/32
+
+1. In the **Tags **section, create tags if you want to associate tags with this input security group\. For more information, see [Tagging AWS Elemental MediaLive Resources](tagging.md)\.
 
 1. Choose **Create**\.

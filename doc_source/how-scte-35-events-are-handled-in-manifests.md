@@ -1,6 +1,6 @@
 # How SCTE\-35 Events Are Handled in Manifests and Sparse Tracks<a name="how-scte-35-events-are-handled-in-manifests"></a>
 
-When manifest decoration or sparse track is enabled, AWS Elemental MediaLive inserts up to three types of information\. The triggers for inserting this information depend on the mode\. 
+When manifest decoration or sparse track is enabled, MediaLive inserts up to three types of information\. The triggers for inserting this information depend on the mode\. 
 
 ## Types of Information<a name="manifest-types-of-info"></a>
 
@@ -9,7 +9,7 @@ When manifest decoration or sparse track is enabled, AWS Elemental MediaLive ins
 | --- | --- | 
 | Base64 | Information about all SCTE\-35 messages in the output is incorporated into the manifest; the entire SCTE\-35 message is added in base64 format\. | 
 | Cue\-out, Cue\-in | SCTE\-35 messages that are ad avails result in the insertion of cue\-out, cue\-in instructions\. | 
-| Blackout |  Only applies to the SCTE\-35 Enhanced ad marker style \(for HLS output; see [[ERROR] BAD/MISSING LINK TEXT](procedure-to-enable-decoration-hls.md)\)\. SCTE\-35 messages that are *not *ad avails result in the insertion of blackout start/end instructions, assuming that blackout is enabled\. If blackout is not enabled, these instructions are not inserted\.  | 
+| Blackout |  Only applies to the SCTE\-35 Enhanced ad marker style \(for HLS output; see [Enabling Decoration – HLS](procedure-to-enable-decoration-hls.md)\)\. SCTE\-35 messages that are *not *ad avails result in the insertion of blackout start/end instructions, assuming that blackout is enabled\. If blackout is not enabled, these instructions are not inserted\.  | 
 
 ## Splice Insert Mode<a name="splice-insert-mode"></a>
 

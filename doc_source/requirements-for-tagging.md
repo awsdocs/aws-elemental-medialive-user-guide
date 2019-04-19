@@ -1,0 +1,5 @@
+# Requirements for AWS Resource Groups—Tagging<a name="requirements-for-tagging"></a>
+
+When users create channels, inputs, or input security groups, they can optionally attach tags to the resource during creation\. Typically, your organization has a policy to tag or to omit tags\. There are two services that control permissions for tagging, for two different scenarios:
++ The ability to tag during channel creation is controlled by actions within AWS Elemental MediaLive\. See [Requirements for AWS Elemental MediaLive Features](requirements-for-medialive.md)\. 
++ The ability to modify tags in existing resources is controlled by actions within Resource Group Tagging\. See [Working with Tag Editor](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/tag-editor.html) in [Getting Started with the AWS Management Console](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/getting-started.html)\.

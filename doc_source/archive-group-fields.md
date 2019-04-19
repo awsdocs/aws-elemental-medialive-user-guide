@@ -1,47 +1,19 @@
-# Fields for Archive Group<a name="archive-group-fields"></a>
+# Fields for the Archive Group<a name="archive-group-fields"></a>
 
-## Archive Settings<a name="archive-settings"></a>
-
-+ Enter a name for the output group\. For example, **Sports Game 10122017 ABR** or **tvchannel59**\.
-
-+ In **Archive settings**, choose **Additional settings** and complete the **Rollover Interval** field , if desired\. This field interacts with the fields in the **Archive destinations** section lower down on this panel\. 
+You must provide information about the destination for each Archive output group\. This destination information applies to all the outputs in the individual Archive output group\.
 
 ## Archive Destinations<a name="archive-destinations"></a>
 
-You must specify the destinations for this output\. Each destination is a bucket and object in an AWS S3 account\. You must be set up so that AWS Elemental MediaLive can access your AWS S3 account; see [[ERROR] BAD/MISSING LINK TEXT](about-S3-access.md)\. 
+For**Archive group destination A** and **Archive group destination B**, specify two destinations when the channel is set up as a [standard channel](channel-class.md), or one destination when it is set up as a single\-pipeline channel\. The URL is one piece of the information that is used for the location and file names of the output file\. For more information, see [About Archive Locations and File Names](about-archive-file-locations.md)\. 
 
-You must specify two destinations because AWS Elemental MediaLive works in redundant mode for outputs: it requires two destinations\. The URL is one piece of the information use for the location and filenames of the output file; see [[ERROR] BAD/MISSING LINK TEXT](#about-archive-file-locations) \. 
+Each destination is a bucket and object in an Amazon S3 account\. 
+
+## Archive Settings<a name="archive-settings"></a>
++ For **Name**, enter a name for the output group\. For example, **Sports Game 10122017 ABR** or **tvchannel59**\.
++ For **Additional settings**, optionally complete the **Rollover Interval** field\. This value is one piece of the information that is used for the [location and file names](about-archive-file-locations.md) of the media files\. 
 
 ## Archive Outputs<a name="archive-outputs"></a>
 
-This section contains fields related to the encoding of the video, audio, and captions in the output, and related to the packaging and delivery of the output\. 
-
-+ Choose **Add output** if you want more than one output in this output group\. An **Output** line is added for each output\. Setup of the individual outputs is described in [[ERROR] BAD/MISSING LINK TEXT](creating-a-channel-step5.md)\.
-
-+ In the **Name modifier** field for each output, type a modifier, if appropriate\. See [[ERROR] BAD/MISSING LINK TEXT](#about-archive-file-locations) for uses for this field\.
-
-## About Archive Locations and Filenames<a name="about-archive-file-locations"></a>
-
-The location of archive output files is controlled by several fields in the Archive output group and the individual outputs\.
-
-+ The two **URL** fields in the **Archive destinations** section\. The URL consists of a *protocol* portion, a *path *portion and a *base filename *portion\. 
-
-  For example, assume the URL is `s3ssl://interviews/3series/Delivery/3633_WangXiuLan`\.
-
-  **s3ssl://** is the protocol\. The protocol is always **s3ssl://**, to indicate that the destination is an AWS S3 bucket\.
-
-  `interviews/3series/Delivery/` is the path\. The path is required and consists a bucket and folders, terminated by a slash\.
-
-  `3633_WangXiuLan` is the base filename\. The base filename is optional\. If you omit it, AWS Elemental MediaLive uses the name of the input as the base filename\.
-
-+ The **Name modifier **field in the **Archive outputs **section\. Required\. The string forms part of the filename\.
-
-+ The **Extension** field in the **Archive outputs **section\. The extension for the filename\. Required only if you do not want to use the default \(`.ts`\)\.
-
-+ The **Rollover interval **field in the **Archive settings **section\. Required\. For example, **600** divides the output into separate files, each 600 seconds \(10 minutes\) long\. Each filename includes a 6\-digit sequential counter, 000000, 000001, and so on\.
-
-The values from these fields are put together to form the location:
-
-**protocol path base\_filename name\_modifier sequential\_counter extension**
-
-For more information, see the examples\. 
+This section contains fields that relate to the encoding of the video, audio, and captions in the output, and that relate to the packaging and delivery of the output\. 
++ If you want more than one output in this output group, choose **Add output**\. An **Output** line is added for each output\. Setup of the individual outputs is described in [Step 6: Create Outputs](creating-a-channel-step5.md)\.
++ For **Name modifier** for each output, enter a modifier, if appropriate\. For uses for this field, see [About Archive Locations and File Names](about-archive-file-locations.md)\. 

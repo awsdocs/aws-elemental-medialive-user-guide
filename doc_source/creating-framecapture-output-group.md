@@ -1,0 +1,19 @@
+# Creating a Frame Capture Output Group<a name="creating-framecapture-output-group"></a>
+
+Follow these steps if, when you were [planning the channel](planning-workflow.md), you determined that you want to include a Frame Capture output group\.
+
+A frame capture output lets you capture the video as a series of files, with each file containing one still JPEG image\. For example, the output might capture every 10th output frame\. You save the files to an Amazon S3 bucket\.
+
+**To create a Frame Capture output group**
+
+1. On the **Create channel** page, under **Output groups**, choose **Add**\. The **Add output group** section appears\. 
+
+1. Choose **Frame capture**, and then choose **Confirm**\. More sections appear\. 
+
+1. Complete the fields as described in [Fields for the Frame Capture Group](framecapture-group-fields.md)\.
+
+1. After you enter all the information for one output group, you can create another output group if your plan requires it\. Otherwise, go to the [next step](creating-a-channel-step5.md)\.
+
+**Topics**
++ [Fields for the Frame Capture Group](framecapture-group-fields.md)
++ [About Frame Capture Locations and File Names](about-framecapture-file-locations.md)

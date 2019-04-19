@@ -1,20 +1,45 @@
 # Document History for User Guide<a name="doc-history"></a>
 
 The following table describes the documentation for this release of AWS Elemental MediaLive\.
-
 + **API version: latest** 
 
-+ **Latest documentation update:** November 27, 2017
+| Change | Description | Date | 
+| --- |--- |--- |
+| [Standard channels and Single\-pipeline channels](creating-a-channel-step1.md) | You can now set up a channel with a single\-pipeline\. The **Create channel** page includes a **Channel class** field | April 5, 2019 | 
+| [Revision to documentation for setting up access](setting-up-for-production.md) | The procedures for setting up the user and the service with AWS IAM access have been revised and split into two chapters, [Setting Up](https://docs.aws.amazon.com/medialive/latest/ug/setting-up.html)> and [Setting Up for Production](https://docs.aws.amazon.com/medialive/latest/ug/setting-up-for-production.html)\.  | March 22, 2019 | 
+| [MediaPackage output group](creating-mediapackage-output-group.md) | There is a new output group type: MediaPackage, which lets your send output to AWS Elemental MediaPackage\. This new output group type creates an HLS output that is streamlined for delivery to MediaPackage\.  | March 13, 2019 | 
+| [Support for pausing and unpausing a channel pipeline](x-actions-in-schedule.md#x-actions-in-schedule-pause) | The channel schedule now supports the ability to enter actions to pause and unpause a pipeline in a channel\.  | March 8, 2019 | 
+| [Support for encrypted HLS inputs](planning-hls-pull.md#planning-hls-input-encrypted) | MediaLive now supports ingest of encrypted HLS inputs\. | March 5, 2019 | 
+| [Push inputs from your VPC](creating-input.md) | You can create an RTP push input or an RTMP push input to push content from an upstream system that is in your Amazon VPC to MediaLive\. Several chapters have been updated, including the chapter about inputs and the chapter about creating a channel from scratch\.  | February 20, 2019 | 
+| [Limits for reservations](limits.md) | The table for MediaLive limits now includes the limits for reservations | February 11, 2019 | 
+| [Tagging](tagging.md) | There is now support for attaching tags to channels, inputs, and input security groups\.  | February 8, 2019 | 
+| [Frame capture output group](creating-framecapture-output-group.md) | There is a new output group type: frame capture output group, to send a series of frame capture files to Amazon Simple Storage Service\.  | January 25, 2019 | 
+| [Integration with AWS CloudTrail](logging-using-cloudtrail.md) | There is now support for logging MediaLive API calls with CloudTrail\.  | January 18, 2019 | 
+| [Integration with AWS Elemental MediaConnect](creating-input.md) | You can set up to use a flow from AWS Elemental MediaConnect as an input for a channel\. Information has been added to the chapter about inputs and the chapter about creating a channel from scratch\.  | December 7, 2018 | 
+| [Revision to documentation for schedules](working-with-schedule.md) | The channel schedule now supports the ability to enter actions to switch the channel from ingesting one input to another input\. This chapter has been revised\.  | November 8, 2018 | 
+| [Input switching](scheduled-input-switching.md) | There is now support for input switching\. The channel must be set up with multiple inputs, and the schedule must contain actions to switch from one input to another\. A new chapter on input switching has been added\. In addition, information about multiple inputs \(which are required for input switching\) has been added in the existing chapters on planning and creating a channel\.  | November 8, 2018 | 
+| [Change in input limits](limits.md) | Input limits are now split into two categories: push and pull\. | November 8, 2018 | 
+| [QVBR rate control mode feature](creating-a-channel-step6.md#video-encode-ratecontrol) | There is a new option for the rate control field that is part of setting up the video encode in the outputs of a channel\. The option is "quality\-defined variable bitrate" \(QVBR\)\. | October 17, 2018 | 
+| [Doc\-only update, Introduced RSS feed](#doc-history) | You can now subscribe to RSS feeds for notifications of updates to this user guide\. | June 21, 2018 | 
 
 
 ****  
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+| Requirement for redundant channels in AWS Elemental MediaPackage | If your downstream system is AWS Elemental MediaPackage, there is no longer a requirement to set up two channels in that service\. The sections [Step 2: Set Up the Downstream System](getting-started.md#getting-started-step2) and [Setting Up the Downstream System](setting-up-downstream-system.md) have been revised to reflect this change\. | August 31, 2018 | 
+| Schedule feature | There is now support for adding SCTE\-35 messages and static image overlays to the channel's schedule, for inclusion in a running channel\.The sections [Working with the AWS Elemental MediaLive Schedule](working-with-schedule.md) and [Working with Image Overlays](working-with-image-overlay.md) have been added\. | August 24, 2018 | 
+| Reservations feature | There is now support for purchasing a reservation for processing\. With a reservation, you pay a lower rate on specific processing\. The section [Working with Reservations in AWS Elemental MediaLive](reservations.md) has been added\. | June 19, 2018 | 
+| Channel logs feature | There is now support for sending log information to Amazon CloudWatch Logs\. The sections [Logging](creating-a-channel-step3.md#channel-logging) and [Monitoring Using Amazon CloudWatch Logs](monitoring-with-logs.md) have been added\. The section [Setting Up AWS Elemental MediaLive Permissions for a Production Environment](setting-up-for-production.md) has been revised to include setup for logs\. | June 13, 2018 | 
+| Console alerts feature | There is now support for viewing channel alerts on the console\. See [Viewing and Monitoring Channels](monitoring-channels.md)\. The information on setting up for alerts has been moved to this chapter\. | June 6, 2018 | 
+| Support for RTMP outputs | [Setting Up the Downstream System](setting-up-downstream-system.md) now includes RTMP\. The sections [Creating an RTMP Output Group](creating-rtmp-output-group.md) and [Settings for an RTMP Output](output-settings-rtmp.md) have been added\. [ Step 3: Match Formats to Categories](categories-captions.md) now includes RTMP CaptionInfo\. [Formats Supported in an RTMP Output](supported-formats-rtmp-output.md) has been added\. | April 18, 2018 | 
+| Input edit feature, Input security group edit feature | Editing of an existing input and an editing of an existing input security group are now supported\. See [Editing an Input](edit-input.md) [Editing an Input Security Group](edit-input-security-group.md) | March 23,2018 | 
+| Input delete feature, Input security group delete feature | Deleting an input and deleting an input security group are now supported\. See [Editing an Input](edit-input.md) [Editing an Input Security Group](edit-input-security-group.md) | March 23, 2018 | 
+| Creating a channel  | [Creating a Channel from Scratch](creating-channel-scratch.md) has been extensively revised, particularly with more information and examples on setting up destinations for output groups\. | March 23, 2018 | 
+| Input specification feature | Input specification fields ensure that the service allocates sufficient processing resources and correctly calculates processing charges\. See [Step 2: Attach Inputs to the Channel](creating-a-channel-step2.md)\. | February 15, 2018 | 
+| Channel edit feature | Editing of the fields in an existing \(saved\) channel is now supported\. See [Editing a Channel](editing-deleting-channel.md#editing-a-channel)\. | February 15, 2018 | 
+| Custom template feature | Users can create custom templates from existing channels, and can import those templates into new channels\. See [Creating a Channel from a Template or by Cloning](creating-channel-template-clone.md)\. | February 15, 2018 | 
 | New service and guide | This is the initial release of AWS Elemental MediaLive User Guide\. | November 27, 2017 | 
-| Input specification feature | Input specification fields ensure that the service allocates sufficient processing resources and correctly calculates processing charges\. See [[ERROR] BAD/MISSING LINK TEXT](creating-a-channel-step2.md)\. | February 15, 2018 | 
-| Channel edit feature | Editing of the fields in an existing \(saved\) channel is now supported\. See [[ERROR] BAD/MISSING LINK TEXT](editing-deleting-channel.md#editing-a-channel)\. | February 15, 2018 | 
-| Custom template feature | Users can create custom templates from existing channels, and can import those templates into new channels\. See [[ERROR] BAD/MISSING LINK TEXT](creating-channel-template-clone.md)\. | February 15, 2018 | 
 
 **Note**  
 The AWS Media Services are not designed or intended for use with applications or in situations requiring fail‐safe performance, such as life safety operations, navigation or communication systems, air traffic control, or life support machines in which the unavailability, interruption or failure of the services could lead to death, personal injury, property damage or environmental damage\.

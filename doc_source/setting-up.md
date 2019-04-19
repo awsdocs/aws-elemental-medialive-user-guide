@@ -1,19 +1,21 @@
 # Setting Up AWS Elemental MediaLive<a name="setting-up"></a>
 
-This chapter provides a basic procedure for setting up identities \(users\) and providing access to AWS Elemental MediaLive\. It describes how to create one or more users as administrators for the service, how to create one or more AWS IAM users to access the AWS Elemental MediaLive console, and how to set up AWS Elemental MediaLive itself as an AWS IAM "trusted service"\. 
+This chapter provides procedures for setting up users to work with AWS Elemental MediaLive\. It describes how to grant permissions that are appropriate for the period when you are experimenting with MediaLive, before you start using MediaLive in a production environment\. 
 
-If you are completely new to AWS or if you have only been using AWS for a few weeks, we recommend that you read this entire chapter\. 
+This chapter covers the following tasks:
++ Setting up one or more administrators for the service
++ Creating or modifying user identities that have permissions to access AWS Elemental MediaLive and ancillary services that MediaLive typically works with
++ Setting up MediaLive as a trusted service 
 
-If you have more experience using AWS services, you could skip the sections on setting up users\. But you must read the section on setting up AWS Elemental MediaLive as a trusted service\. 
+After you perform the procedures in this chapter, you and other users will have permissions that let you successfully follow the [Getting Started with AWS Elemental MediaLive](getting-started.md)\. 
 
-This chapter provides steps for a basic setup\. For detailed information on the many features of IAM that may be appropriate and useful to your deployment, see [AWS IAM User Guide](http://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
+**Important**  
+This chapter includes steps that grant broad permissions to AWS Elemental MediaLive and other services\. These permissions are known as AWS Identity and Access Management \(IAM\) permissions\. The permissions are intended to allow you and others in your organization to get started with MediaLive as quickly as possible\. These permissions are not suitable for assigning to a wide group of users or for users working in a production environment\.  
+To set up users for production use of AWS Elemental MediaLive, see [Setting Up AWS Elemental MediaLive Permissions for a Production Environment](setting-up-for-production.md)\. 
 
-
-+ [Required Permissions in AWS Elemental MediaLive](required-access.md)
-+ [Sign Up for AWS Elemental MediaLive](setting-up-aws-sign-up.md)
-+ [Create an IAM User](setting-up-create-iam-user.md)
-+ [Access to Amazon EC2 Systems Manager Parameter Store](about-EC2Password.md)
-+ [Access to Amazon S3](about-S3-access.md)
-+ [Access to AWS Elemental MediaStore](about-mediastore-access.md)
-+ [Setting up Trusted Entity](trusted-entity-role.md)
-+ [Set up Permissions for AWS Elemental MediaLive](permissions-medialive.md)
+**Topics**
++ [Signing Up for AWS Elemental MediaLive](setting-up-aws-sign-up-preproduction.md)
++ [Creating an Administrator IAM User](preproduction-create-iam-admin.md)
++ [Creating a Non\-Administrator IAM User](preproduction-set-up-users.md)
++ [Setting up AWS Elemental MediaLive as a Trusted Service](preproduction-trusted-entity.md)
++ [Data Retention and Personally Identifiable Information](data-retention.md)

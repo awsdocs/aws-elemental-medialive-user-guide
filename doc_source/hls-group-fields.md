@@ -1,71 +1,65 @@
-# Fields for HLS Group<a name="hls-group-fields"></a>
+# Fields for the HLS Group<a name="hls-group-fields"></a>
 
-## HLS Destinations<a name="hls-destinations"></a>
+You must provide information about the destination and the structure and contents of the manifest for each HLS output group\. This destination and manifest information applies to all the outputs in the individual HLS output group\.
 
-You must specify the destination URLs for this output\. You must specify two destination URLs because AWS Elemental MediaLive works in redundant mode for outputs: it requires two destinations\. 
+## HLS Group Destinations<a name="hls-destinations"></a>
 
-The URL is one piece of the information used for the location and filenames of the manifest and media files\. 
+For the destination URLs, specify two destinations when the channel is set up as a [standard channel](channel-class.md), or one destination when it is set up as a single\-pipeline channel\. 
+
+The URL is one piece of the information that is used for the [destination and file names](about-hls-file-locations.md) of the manifest and media files\. 
+
+## HLS Settings<a name="hls-settings"></a>
++ For **Name**, enter a name for the output group\. For example, **Sports Game 10122017 ABR** or **tvchannel59**\.
++ For **CDN settings**, set the value to specify the type of connection that is being used to write to the destination URLs \(specified in [HLS Group Destinations](#hls-destinations)\)\. The options are the following:
+  + **Hls basic put**: To send to a content delivery network \(CDN\) that uses HTTP or HTTPS `PUT`\. Or to send to an Amazon S3 bucket \(`s3://` or `s3ssl://`\)\.
+  + **Hls media store**: To send to an MediaStore container \(`mediastoressl://`\)\.
+  + **Hls akamai**: To send to an Akamai CDN \(this always uses HTTP or HTTPS\)\.
+  + **Hls webdav**: To send to AWS Elemental MediaPackage\. Or to send to a downstream system that uses HTTP WebDAV or HTTPS WebDAV\. 
+
+  When you select the CDN type, more fields appear, appropriate to the type of connection\. For details about a field, choose the **Info** link next to the field\. 
+
+  The CDN is one piece of the information that is used for the [destination and file names](about-hls-file-locations.md) of the manifest and media files\. 
++ Optionally change the value of **Input loss action**\. This field applies only if you have set up the channel as a standard channel\. It is ignored for a single\-pipeline channel; no switching occurs\.
+
+  If you're sending output to AWS Elemental MediaPackage, set this field to match how you set the [channel class](channel-class.md):
+  + If the channel is a standard channel \(to support input redundancy on AWS Elemental MediaPackage\), set this field to **PAUSE\_OUTPUT**\. With this setup, if MediaLive stops producing output on one pipeline, MediaPackage detects the lack of content on its current input and switches to the other input\. Content loss is minimized\. \(If you set this field to **EMIT\_OUTPUT**, MediaLive sends filler frames to MediaPackage\. MediaPackage doesn't consider filler frames to be lost content, and therefore doesn't switch to its other input\.\)
+  + If the channel is a single\-pipeline channel, set this field to **EMIT\_OUTPUT**\. In this way, if the pipeline fails in MediaLive then AWS Elemental MediaPackage continues delivering to its own downstream system \(although the content will be filler frames\)\. If you set this field to **PAUSE\_OUTPUT**, AWS Elemental MediaPackage stops updating its endpoint, which might cause problems at the downstream system\.
+
+  For other destinations, the appropriate value for this field depends on the behavior of the downstream system\.
++ Complete the **Caption language mappings** fields only if your plan is to include at least one embedded captions asset in the output in this output group\. See [HLS Manifests \(Embedded Captions\)](set-up-the-hls-manifest.md)\.
 
 ## HLS Outputs<a name="hls-outputs"></a>
 
-This section contains fields related to the encoding of the video, audio, and captions in the output, and related to the packaging and delivery of the output\. 
+This section contains fields that are related to the encoding of the video, audio, and captions in the output, and that are related to the packaging and delivery of the output\. 
 
-+ Choose **Add output** if you want more than one output in this output group\. An **Output** line is added for each output\. Setup of the individual outputs is described in [[ERROR] BAD/MISSING LINK TEXT](creating-a-channel-step5.md)\.
+If you want more than one output in this output group, choose **Add output**\. An **Output** line is added for each output\. Setup of the individual outputs is described in [Step 6: Create Outputs](creating-a-channel-step5.md)\.
 
-+ In the **Name modifier** field for each output, enter a modifier, if appropriate\. See [[ERROR] BAD/MISSING LINK TEXT](#about-hls-file-locations) for uses for this field\.
+For the **Name modifier** field for each output, enter a modifier, if appropriate\. For uses for this field, see [About HLS Group Destinations and File Names](about-hls-file-locations.md)\. 
 
-## About HLS Destinations and Filenames<a name="about-hls-file-locations"></a>
+## Location<a name="hls-location"></a>
 
-HLS output consists of a manifest, one rendition manifest for each output in the output group, and media files: one set of \.ts files for each output, and optionally one or more captions files for each output\. 
+Complete this section to specify the location and organization of the manifest and asset files at the publishing point\. The fields in this section provide some of the information that is used for the [destination and file names](about-hls-file-locations.md) of the manifest and media files\. 
 
-For example, one manifest file called `curling.m3u8`, one rendition manifest called `curling_high.m3u8`, and many `.ts` files containing the video and audio \(each file containing one segment of a specified number of seconds\) and three `.vtt` files for English, French, and Spanish Web\-VTT captions\.
+## Manifests and Segments<a name="hls-manifests"></a>
 
-The location of these files is controlled by several fields in the HLS output group and the individual outputs:
+Complete this section to change the default setup of the HLS manifest and the segmentation of outputs\.
 
-+ The fields in the **CDN** section\. 
+## DRM<a name="hls-drm"></a>
 
-  The main field specifies the type of connection to the CDN, which is the downstream system that is the destination for the HLS output\. For example, the CDN is of type HLS WebDAV if the destination is AWS Elemental MediaPackage\. The other fields in this section provide connection details\.
+Complete this section only if you are setting up for DRM using a static key to encrypt the output\. In **Key provider** settings, choose **Static key**, and then complete all the other fields as appropriate\. For details about a field, choose the **Info** link next to the field\. 
 
-+ The two **URL** fields in the **HLS destinations** section\. 
+In a static key setup, you enter an encryption key in this section \(along with other configuration data\) and then give that key to the other party \(for example, by sending it in an email\)\. A static key is not really a DRM solution and is not highly secure\.
 
-  The URL consists of a *protocol* portion, a *path *portion and a *base filename *portion\. 
+MediaLive supports only a static key as an encryption option\. To use a DRM solution with a key provider, you must deliver the output to AWS Elemental MediaPackage \(in other words, set up AWS Elemental MediaPackage as the destination for the output\) and then encrypt the video using AWS Elemental MediaPackage\. For more information, see the [AWS Elemental MediaPackage User Guide](https://docs.aws.amazon.com/mediapackage/latest/ug/what-is.html)\. 
 
-  For example, assume the URL is `https://sports/curling`\.
+## Ad Markers<a name="hls-ad-markers"></a>
 
-  `https://` is the protocol portion\. The protocol is required and must be correct for the CDN you specified\. For example, **https://** is correct if the CDN type is **Hls basic put** or **Hls akamai** or **Hls webdav**\. 
+Complete this section if you want to include SCTE\-35 ad messages in the output\. See [SCTE\-35 Message Processing](scte-35-message-processing.md) and specifically [Enabling Decoration – HLS](procedure-to-enable-decoration-hls.md)\.
 
-  + `http://` or `https://` if you selected **Hls basic put** as the CDN and you are sending to send to a CDN that uses HTTP \(or HTTPS\) PUT\. 
+## Captions<a name="hls-captions"></a>
 
-  + `s3://` or `s3ssl://` if you selected **Hls basic put** as the CDN and you are sending to send to an AWS S3 bucket\.
+If your plan is to include at least one embedded captions asset in the output in this output group, then you can optionally set up the HLS manifest to include information about the captions languages\. See [HLS Manifests \(Embedded Captions\)](set-up-the-hls-manifest.md)\.
 
-  + `mediastoressl://` if you selected **Hls media store** as the CDN\. 
+## ID3<a name="hls-id3"></a>
 
-  + `http://` or `https://` if you selected **Hls akamai** as the CDN\.
-
-  + `http://` or `https://` if you selected **Hls webdav** as the CDN and you are sending to a server using WebDAV or you are sending to AWS Elemental MediaPackage\.
-
-  `sports/` is the path portion\. The path is required and consists of the folders, terminated by a slash\. It identifies the location of the manifest and media files\. 
-
-  `curling` is the base filename\. It is used in the manifest filenames and media filenames\. The base filename is optional\. If you omit it, AWS Elemental MediaLive uses the name of the input as the base filename\.
-
-+ The **Name modifier **field in the **HLS outputs **section\. 
-
-  Required only in output groups with more than one output\. For example, **\_high**\. Used in the rendition manifest filenames and in media filenames\. 
-
-  For example, following from the example above, the manifest file would be `curling`, rendition manifest files would be `curling_high` and `curling_low`\. Media video files would by `curling_high.00001.ts`, `curling_high.00002.ts`, and so on for output 1, and `curling_medium.00001.ts`, `curling_medium.00002.ts`, and so on for output 2\. 
-
-+ The **Segment modifier** field in the **Output settings** section of each individual output\. 
-
-  Always optional\. For example, **\_high**\. Used only in the media filenames\. Typically used instead of **Name modifier**, when you have only one output in the output group and you want a modifier in the media but not in the manifest\. 
-
-  For example, following from the example above, the manifest file would be `curling`, the rendition manifest file would be `curling`, and media video files would by `curling_high.00001.ts`, `curling_high.00002.ts`\. 
-
-+ The **Base URL manifest** field and **Base URL** field in the **Location **section\. 
-
-  Always optional\. These fields are typically used only for non\-standard manifests\.
-
-+ The **Directory structure** field in the **Location** section\. 
-
-  Optional\. Used only to create subdirectories for the media files\. Creates one subdirectory for each output, then creates sub\-subdirectories according to the Segments per subdirectory field\. 
-
-  For example, the high\-resolution media files would go in subdirectories with the same name as each rendition manifest: `curling_high` and `curling_low`\. Inside each subdirectory would be a sub\-subdirectory named `00001` \(for the first set of media files\), `00002` \(for the next set of media files\), and so on\.
+You can use these fields to insert timed ID3 metadata into all the outputs in this output group\. For detailed information, see [Inserting ID3 Metadata When Creating the Channel](insert-timed-metadata.md)\.
