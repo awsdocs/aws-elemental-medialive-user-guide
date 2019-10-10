@@ -36,7 +36,7 @@ Create your input before you create the channel that ingests the input\.
 
    MediaLive always creates two endpoints:
    + If the channel for this input will be set up as a standard channel, both endpoints will be used\. 
-   + If the channel for this input will be set up as a single\-pipeline channel, only the first endpoint will be used\. MediaLive won't expect to receive content at the second endpoint\. 
+   + If the channel for this input will be set up as a single\-pipeline channel, only the first endpoint will be used\. MediaLive won't expect to receive content at the second endpoint\. (While Streaming via any streaming services like OBS etc , "rtmp://203.59.21.13:1935/live" indicates the Server and "curling" indicates the Stream Key )
 
 1. Provide the upstream system with the following information:
    + If the channel for this input will be set up as a standard channel, provide both locations\. The upstream system must push the video streams to these locations\.
