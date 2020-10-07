@@ -17,9 +17,3 @@ Create those policies now in IAM\.
    + You can choose the **Import managed policy** button to import an existing policy into this policy\. The policy actions are copied over \(the policy is *not* copied by reference\), so after importing you can add and remove actions if you want\.
 
    For full instructions on creating a custom policy, see the [https://docs.aws.amazon.com/IAM/latest/UserGuide/](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
-
-To create the policy, follow the prompts on the console\. Here are some tips for creating the policy:
-+ You can create one policy that covers several services\. There is no need to create a policy for each separate service\. To create a policy for several services, choose the actions for one service, and then choose the **Add additional permissions** button at the bottom of the screen to set up another service\. You may need to move both the vertical scroll bars to the bottom to reveal this button\. 
-+ You can choose the **Import managed policy** button to import an existing policy into this policy\. The policy actions are copied over \(the policy is *not* copied by reference\), so after importing you can add and remove actions if you want\.
-
-For full instructions on creating a custom policy, see the [https://docs.aws.amazon.com/IAM/latest/UserGuide/](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\.
