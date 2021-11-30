@@ -1,4 +1,4 @@
-# Submitting a Batch Update Schedule Command<a name="submitting-batch-command"></a>
+# Submitting a batch update schedule command<a name="submitting-batch-command"></a>
 
 The command for a batch update schedule command is identical for creating actions, deleting actions, or submitting a combination of create and delete actions\. The command is identical\. Only the contents of the JSON payload differ\.
 
@@ -7,19 +7,19 @@ There are different ways to enter the command to create an action\. We recommend
 
 The instructions and examples in this section illustrate this usage\. 
 
-The following rules apply to create actions:
+The following general rules apply to batch update commands:
 + You can create actions when the channel is running or when it is idle\. 
-+ The action must have a UTC start time that is at least 15 seconds in the future \(and no more than 14 days in the future\)\. After that cutoff, AWS Elemental MediaLive rejects the create request\. 
 + You can create any number of actions in one request, or any combination of types of actions in one request\. For example, you can mix the creation of SCTE\-35 message actions and image overlay actions\. 
-+ If you create several actions in one request and one of the create requests fails \(usually because the start time isn't sufficiently in the future\), then they will all fail\.
++ If you create several actions in one request and one of the create requests fails \(usually because the start time isn't sufficiently in the future\), then they all fail\.
 
 The following rules apply to delete actions:
 + You can delete an action when the channel is running or when it is idle\. 
-+ The action that you delete must have a UTC start time or a follow start time \(for input switches\) that is at least 15 seconds in the future\. \(In other words, it must not be already received in the channel\.\) After that cutoff, AWS Elemental MediaLive rejects the delete request\.
 + You can delete any number of actions in one request, or any combination of types of actions in one request\. For example, you can mix the deletion of SCTE\-35 message actions and image overlay actions\. 
-+ If you delete several actions in one request and one of the delete requests fails \(usually because the start time isn't sufficiently in the future\), then they will all fail\.
++ If you delete several actions in one request and one of the delete requests fails \(usually because the start time isn't sufficiently in the future\), then they all fail\.
 
 **To submit a batch command**
+
+1. Before you add or delete actions, read [Creating actions in the schedule \(console\)](schedule-using-console-create.md) and [Deleting actions from the schedule \(console\)](schedule-using-console-delete.md)\.
 
 1. Prepare a file that contains the channel ID and the appropriate JSON payload for the actions\. For the structure and examples of the JSON payload for different actions, see the sections that follow\. 
 
@@ -39,6 +39,4 @@ The following rules apply to delete actions:
 
    `aws medialive batch-update-schedule --channel-id 999999 --cli-input-json schedule-create-actions.txt`
 
-1. To submit the command, press **Enter**\. The response appears on the screen\. The response repeats the data from the request\. 
-
-   If the JSON payload includes create actions and you didn't enter `ActionName` elements for an action, AWS Elemental MediaLive generates one and includes it in the response\.
+1. To submit the command, press **Enter**\. The response appears on the screen\. The response repeats the data from the request\.

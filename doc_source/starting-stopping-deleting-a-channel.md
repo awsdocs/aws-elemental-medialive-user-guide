@@ -1,12 +1,14 @@
-# Starting, Stopping, and Pausing an AWS Elemental MediaLive Channel<a name="starting-stopping-deleting-a-channel"></a>
+# Starting, stopping, and pausing an AWS Elemental MediaLive channel<a name="starting-stopping-deleting-a-channel"></a>
 
 After you create a channel, you can start it\. The channel never starts automatically except when it is already running and attempts to recover from a failure\.
 
 You can stop a running channel at any time\. 
 
-You can also pause one or both the pipelines in a channel by adding a Pause action to the schedule for the channel\. For more information, see [Types of Schedule Actions for Pause](x-actions-in-schedule.md#x-actions-in-schedule-pause)\.
+You can also pause one or both the pipelines in a channel by adding a Pause action to the schedule for the channel\. For more information, see [How pause and unpause actions work](sched-how-actions-work.md#x-actions-in-schedule-pause)\.
 
-For information about charges when a channel is running, see [Pricing](pricing.md)\.
+For information about charges for a channel, see [Pricing](pricing.md)\. There are different charges depending on the state of the channel:
++ Charges when the channel is running
++ Charges when the channel is idle
 
 **To start a channel**
 
@@ -16,7 +18,7 @@ For information about charges when a channel is running, see [Pricing](pricing.m
 
 1. Choose **Start**\. The channel state changes to one of the following:
    + **Starting**
-   + **Running** \(encoding on both destinations\)
+   + **Running** \(encoding on the pipeline or pipelines\)
 
 1. Choose the channel name\. The details for the channel appear\.
 

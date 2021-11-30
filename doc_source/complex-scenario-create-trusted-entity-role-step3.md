@@ -1,8 +1,8 @@
-# Step 3: Create Roles<a name="complex-scenario-create-trusted-entity-role-step3"></a>
+# Step 3: Create roles<a name="complex-scenario-create-trusted-entity-role-step3"></a>
 
 Any person who is an administrator can perform the procedure to create a role and attach policies to the role\. 
 
-In [Step 1: Determine the Access Requirements](complex-scenario-create-trusted-entity-role-step1.md), someone in your organization identified the roles that you need to create\. Create those roles now using IAM\. 
+In [Step 1: Determine the access requirements](complex-scenario-create-trusted-entity-role-step1.md), someone in your organization identified the roles that you need to create\. Create those roles now using IAM\. 
 
 **To create a role and attach a policy to it**
 
@@ -22,7 +22,7 @@ In [Step 1: Determine the Access Requirements](complex-scenario-create-trusted-e
 
 1. In the **Attach permissions policies** section, select all the policies that apply for this role, and then choose **Next: Tags**\.
 
-1. Add tags if your organization has a policy to create tags for resources\. For more information, see [Tagging AWS Elemental MediaLive Resources](tagging.md)\. Then choose **Next: Review**\.
+1. Add tags if your organization has a policy to create tags for resources\. For more information, see [Tagging AWS Elemental MediaLive resources](tagging.md)\. Then choose **Next: Review**\.
 
 1. Choose **Next: Review**\.
 

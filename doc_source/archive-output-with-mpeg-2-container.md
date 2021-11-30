@@ -1,11 +1,10 @@
-# Archive Output with MPEG\-2 Container<a name="archive-output-with-mpeg-2-container"></a>
+# Archive output with MPEG\-2 container<a name="archive-output-with-mpeg-2-container"></a>
 
-A transport stream in an MPEG\-2 container supports passthrough of the SCTE\-35 messages, but it doesn't support creation of a manifest\. The following table shows the valid processing options\.
+In an Archive output \(a transport stream in an MPEG\-2 container\), MediaLive supports SCTE\-35 features as follows:
++ Passthrough of the SCTE\-35 messages – Supported\.
++ Manifest decoration – Not supported because these outputs don't have manifests\.
++ Blanking and blackout – Applicable\. Content in the output is blanked or blacked out if the features are enabled at the channel level\.
 
-
-****  
-
-| SCTE\-35 Passthrough | Manifest Decoration | Blanking and Blackout | Effect | 
-| --- | --- | --- | --- | 
-| Enabled | Not applicable | Yes or No | Turns on passthrough of SCTE\-35 messages\. You could also implement blanking and blackout\. | 
-| Disabled | Not applicable | No |  Turns off passthrough, to remove SCTE\-35 messages from the video stream\. Do not implement blanking or blackout\. Choose this option only if, in a downstream system, you don't want to replace video that was originally marked by cues\.   | 
+Be careful of setting up so that you have removed messages from the input \(passthrough disabled\) and you have not enabled blanking and blackout\. In this case, the video content that was marked by messages \(in the input\) will not be marked \(in the output\)\. 
++ If you have the rights to that video content, there is no problem setting up this way\.
++ If you don't have the rights, then the only way to find that content will be to look for the IDR i\-frames that identify where the SCTE\-35 message used to be\.

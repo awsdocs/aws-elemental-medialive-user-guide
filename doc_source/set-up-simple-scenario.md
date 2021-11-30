@@ -1,10 +1,10 @@
-# Requirements for Permissions for the Simple Option<a name="set-up-simple-scenario"></a>
+# Requirements for permissions for the simple option<a name="set-up-simple-scenario"></a>
 
 Read this section if you decide that the [simple option](scenarios-for-medialive-role.md#about-simple-scenario) for the trusted entity is appropriate to your deployment\. 
 
-\(To set up for the complex option, see [Setting Up AWS Elemental MediaLive as a Trusted Service](setup-medialive-trusted-service.md)\.\)
+\(To set up for the complex option, see [Setting up AWS Elemental MediaLive as a trusted service](setup-medialive-trusted-service.md)\.\)
 
-For users to work in the **IAM Role** section on the **Channel and input details** pane, they must have access to specific IAM actions\. 
+ For users to work in the **IAM Role** section on the **Channel and input details** pane, they must have access to specific IAM actions\. 
 
 The following screenshot shows the **IAM Role** section on the **Channel and input details** pane as it appears when you start to create a channel\. 
 
@@ -19,7 +19,7 @@ You must set up users as follows:
 The following table shows the service and action in IAM that you must grant to regular users with the simple option\. 
 
 
-| Permissions | Service Name in IAM | Actions | 
+| Permissions | Service name in IAM | Actions | 
 | --- | --- | --- | 
 |  Choose the **Create role from template option**  | IAM |  `CreateRole` `PutRolePolicy` `AttachRolePolicy`  | 
 |  Choose **MediaLiveAccessRole** from the list in **Use existing role**  | IAM |  `ListRole` `PassRole`   | 

@@ -1,4 +1,4 @@
-# Step 2: Create an IAM Group<a name="setup-user-step-groups"></a>
+# Step 2: Create an IAM group<a name="setup-user-step-groups"></a>
 
 The procedure in this section shows how to create an IAM group and attach policies\. Anyone with IAM administrator\-level credentials can perform the procedure\. Perform this procedure once, at initial setup\. Before you start the procedure, you should have already created the two policies in [Step 1: Create Customer Managed Policies](setup-user-step-policies.md)\.
 
@@ -16,11 +16,10 @@ The procedure in this section shows how to create an IAM group and attach polici
    + **MediaLiveTrustedEntityAccess** \(customer managed policy\)
    + **CloudWatchReadOnlyAccess** \(AWS managed policy\)
    + **CloudWatchEventsFullAccess** \(AWS managed policy\)
-   + **CloudWatchReadOnlyAccess **\(AWS managed policy\)
    + **AmazonEC2FullAccess** \(AWS managed policy for access to AWS Virtual Private Network\)
    + **AWSElementalMediaPackageFullAccess** \(AWS managed policy\)
    + **ResourceGroupsandTagEditorFullAccess** \(AWS managed policy\)
-   + **AmazonSSMFullAccess** \(AWS managed policy for access to Amazon EC2 Systems Manager\)
+   + **AmazonSSMFullAccess** \(AWS managed policy for access to AWS Systems Manager\)
    + **AmazonSNSFullAccess** \(AWS managed policy\)
 
 1. Choose **Next Step**, review your information, and then choose **Create Group**\.

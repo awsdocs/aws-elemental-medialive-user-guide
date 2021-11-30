@@ -1,8 +1,8 @@
-# Use Case C: One Input Format Converted to Different Formats, One Format for Each Output<a name="use-case-one-input-format-different-format-for-each-output"></a>
+# Use case C: One input format converted to different formats, one format for each output<a name="use-case-one-input-format-different-format-for-each-output"></a>
 
 This example shows how to implement [[the third use case](use-case-one-input-format-to-one-output-format-not-converted.md)](use-case-one-input-format-to-several-output-formats.md) from the typical scenarios\. The input is set up with one format of captions and two or more languages\. You want to produce several different types of output\. In each output, you want to convert the captions to a different format but include all the languages\.
 
-For example, the input has Teletext captions in Czech and Polish\. Assume that you want to produce a Microsoft Smooth output and an HLS output\. Assume that in the Microsoft Smooth output, you want to include one video and one audio and you want to convert the captions to TTML\. In the HLS output, you want to include one video and one audio and you want to convert the captions to Web\-VTT\.
+For example, the input has Teletext captions in Czech and Polish\. Assume that you want to produce a Microsoft Smooth output and an HLS output\. Assume that in the Microsoft Smooth output, you want to include one video and one audio and you want to convert the captions to TTML\. In the HLS output, you want to include one video and one audio and you want to convert the captions to WebVTT\.
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/captions_INttext_OUT_OPmss_hls_result.png)
 
@@ -33,12 +33,12 @@ For example, the input has Teletext captions in Czech and Polish\. Assume that y
    + Create one output and set up the video and audio\. 
    + Create a second output that contains one captions encode and no video or audio encodes, and with the following settings: 
      + **Captions selector name**: Captions Selector 1\.
-     + **Captions settings**: Web\-VTT\. 
+     + **Captions settings**: WebVTT\. 
      + **Language code** and **Language description**: Czech\.
      + Other fields: Set as desired\.
    + Create a third captions output that contains one captions encode and no video or audio encodes, and with the following settings:
      + **Captions selector name**: Captions Selector 2\.
-     + **Captions settings**: Web\-VTT
+     + **Captions settings**: WebVTT
      + **Language code** and **Language description**: Polish\.
      + Other fields: same as the second output \(the Czech captions\)\.
 

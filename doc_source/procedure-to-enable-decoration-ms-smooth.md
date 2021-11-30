@@ -1,4 +1,4 @@
-# Enabling Decoration – Microsoft Smooth<a name="procedure-to-enable-decoration-ms-smooth"></a>
+# Enabling decoration – Microsoft Smooth<a name="procedure-to-enable-decoration-ms-smooth"></a>
 
 With Microsoft Smooth, if you enable manifest decoration, instructions are inserted in the sparse track\.
 
@@ -6,7 +6,7 @@ Manifest decoration is enabled at the output group level, which means that the s
 
 **To enable decoration**
 
-1. In the channel that you are creating, make sure that you have set the ad avail mode\. See [Getting Ready: Set the Ad Avail Mode](getting-ready-set-the-ad-avail-mode.md)\.
+1. In the channel that you are creating, make sure that you have set the ad avail mode\. See [Getting ready: Set the ad avail mode](getting-ready-set-the-ad-avail-mode.md)\.
 
 1. In the navigation pane, find the desired Microsoft Smooth output group\. 
 

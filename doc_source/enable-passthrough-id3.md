@@ -1,8 +1,8 @@
-# Enabling ID3 Metadata<a name="enable-passthrough-id3"></a>
+# Enabling ID3 metadata<a name="enable-passthrough-id3"></a>
 
 To include ID3 metadata in an output, you must enable ID3 metadata in that output when you create or edit the channel\. 
 
-## Enabling in Archive Outputs<a name="enable-passthrough-archive"></a>
+## Enabling in archive outputs<a name="enable-passthrough-archive"></a>
 
 To include ID3 metadata in Archive outputs, you must enable the feature in each applicable output\. 
 
@@ -16,9 +16,9 @@ To include ID3 metadata in Archive outputs, you must enable the feature in each 
 
 1. Repeat for each applicable output\.
 
-For information about the results of enabling, see [Results of Enabling ID3 Metadata](#id3-enable-result) later in this section\.
+For information about the results of enabling, see [Results of enabling ID3 metadata](#id3-enable-result) later in this section\.
 
-## Enabling in HLS Outputs<a name="enable-passthrough-hls"></a>
+## Enabling in HLS outputs<a name="enable-passthrough-hls"></a>
 
 To include ID3 metadata in HLS outputs, you must enable the feature in each applicable output\. 
 
@@ -34,15 +34,15 @@ To include ID3 metadata in HLS outputs, you must enable the feature in each appl
 
 1. Repeat for each applicable output\.
 
-For information about the results of enabling, see [Results of Enabling ID3 Metadata](#id3-enable-result) later in this section\.
+For information about the results of enabling, see [Results of enabling ID3 metadata](#id3-enable-result) later in this section\.
 
-## Enabling in MediaPackage Outputs<a name="enable-passthrough-mediapackage"></a>
+## Enabling in MediaPackage outputs<a name="enable-passthrough-mediapackage"></a>
 
 To include ID3 metadata in MediaPackage outputs, you don't have to set up the output\. MediaPackage outputs are automatically set up with this feature enabled\. 
 
-For information about handling of ID3 metadata in MediaPackage outputs, see [Results of Enabling ID3 Metadata](#id3-enable-result) later in this chapter\.
+For information about handling of ID3 metadata in MediaPackage outputs, see [Results of enabling ID3 metadata](#id3-enable-result) later in this chapter\.
 
-## Enabling in UDP Outputs<a name="enable-passthrough-udp"></a>
+## Enabling in UDP outputs<a name="enable-passthrough-udp"></a>
 
 To include ID3 metadata in UDP outputs, you must enable the feature in each applicable output\. 
 
@@ -56,22 +56,22 @@ To include ID3 metadata in UDP outputs, you must enable the feature in each appl
 
 1. Repeat for each applicable output\.
 
-For information about the results of enabling, see [Results of Enabling ID3 Metadata](#id3-enable-result) later in this section\.
+For information about the results of enabling, see [Results of enabling ID3 metadata](#id3-enable-result) later in this section\.
 
-## Results of Enabling ID3 Metadata<a name="id3-enable-result"></a>
+## Results of enabling ID3 metadata<a name="id3-enable-result"></a>
 
 Here are the results of enabling ID3 metadata in the channel:
 + ID3 metadata other than type TDRL or PRIV that is present in the input is automatically included in the eligible outputs\. 
 + ID3 metadata of type TDRL or PRIV that is present in the input is passed through to eligible outputs as follows:
   + If the frame doesn't have "Elemental Technologies" included in the wording, the metadata is passed through\.
   + If the frame has "Elemental Technologies" included in the wording, the metadata is not passed through\. The metadata isn't passed through because MediaLive assumes that the timestamp for this metadata has passed\.
-+ ID3 metadata that you set up in the output group is inserted in those outputs where you enabled ID3 metadata, when you created the channel\. For information about setting up ID3 metadata in the output group, see [Inserting ID3 Metadata When Creating the Channel](insert-timed-metadata.md)\.
-+ ID3 metadata that you set up by creating an action in the MediaLive schedule is included in the eligible outputs\. For information about setting up ID3 metadata in the schedule, see [ Inserting ID3 Metadata Using the Schedule](insert-usercreated-metadata.md)\.
++ ID3 metadata that you set up in the output group is inserted in those outputs where you enabled ID3 metadata, when you created the channel\. For information about setting up ID3 metadata in the output group, see [Inserting ID3 metadata when creating the channel](insert-timed-metadata.md)\.
++ ID3 metadata that you set up by creating an action in the MediaLive schedule is included in the eligible outputs\. For information about setting up ID3 metadata in the schedule, see [ Inserting ID3 metadata using the schedule](insert-usercreated-metadata.md)\.
 
 The eligibility of an output depends on the output group type, as shown in the following table\.
 
 
-| Type of Output Group | ID3 Metadata That Is Present in Input | ID3 Metadata That You Specify When Setting Up the Channel | ID3 Metadata That You Insert Using the Schedule | 
+| Type of output group | ID3 metadata that is present in input | ID3 metadata that you specify when setting up the channel | ID3 metadata that you insert using the schedule | 
 | --- | --- | --- | --- | 
 | Archive | Passed through | Not included in output | Included in output | 
 | HLS | Passed through | Included in output | Included in output | 

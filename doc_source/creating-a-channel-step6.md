@@ -1,24 +1,49 @@
-# Step 7: Set Up the Video Encode<a name="creating-a-channel-step6"></a>
+# Step 6: Set up the video encode<a name="creating-a-channel-step6"></a>
 
-The output section for every type of output group contains a **Stream settings** section\. In this section, you create [encodes](channels.md#encode) for the video, audio \(if applicable\), and captions \(if applicable\) in the output and specify the details of how you want these assets encoded\. 
+In [Step 5: Create output groups and outputs](creating-a-channel-step4.md), you created the output groups and outputs that you identified when you planned the channel\. Each output section contains a **Stream settings** section\. You must now create all the video [encodes](channels.md#encode)\. 
 
-The following procedure describes how to set up a video encode and assumes that you have [created the output](creating-a-channel-step5.md) that will hold the video\. The fields for a video encode are identical for all output group types\. For example, the fields for video for an HLS group are identical to those for a UDP group\. 
+**General procedure**  
+Follow this general procedure to set up the video encode\.
 
-**To set up the video encodes in most output types**
+1. Decide how you're going to create each encode:
+   + From scratch\.
+   + By sharing an encode that already exists in this output or another output in the channel\.
+   + By cloning an encode that already exists in this output or another output in the channel\.
+
+   You might have already made this decision\. If not, you should decide now\. For more information, see [Step 4: Design the encodes](designing-encodes.md)\.
+
+   You can share or clone video encodes from one output to another in the same output group, or from one output to an output in another output group\.
+
+1. Read the appropriate sections that follow\.
+
+**Topics**
++ [Creating a video encode from scratch](#create-video-scratch)
++ [Creating a video encode by sharing](#create-video-share)
++ [Creating a video encode by cloning](#create-video-clone)
+
+## Creating a video encode from scratch<a name="create-video-scratch"></a>
+
+**To set up the video encodes in most types of output**
 
 1. On the **Create channel** page, find the output group that you [created](creating-a-channel-step4.md)\. 
 
-1. Under that output group, find the output \(or the first output\) where you want to set up a video encode\.
+1. Under that output group, find the output where you want to set up a video encode\.
 
-1. Choose the link for the video encode\. 
+1. Choose the link for the video encode\.
 
-1. For **Codec settings**, choose the codec to use for this output\. More fields appear\. 
+1. For **Codec settings**, choose the codec to use for this encode\. More fields appear\.
 
 1. Complete each field as appropriate\. For details about a field, choose the **Info** link next to the field\. 
+   + For information about the **Width** and **Height** fields \(which define the video resolution\), choose the **Info** link for each field\. The frame rate affects the output charges for this channel\. For more information about charges, see [the MediaLive price list](https://aws.amazon.com/medialive/pricing/)\.
+   + For information about the **Framerate** fields, choose the **Info** link for each field\. The frame rate affects the output charges for this channel\. For more information about charges, see [the MediaLive price list](https://aws.amazon.com/medialive/pricing/)\.
+   + For information about the **Color space** fields, see [Color space handling in AWS Elemental MediaLive](color-space.md)\.
+   + For information about the **Additional encoding setting**s fields, see [Setting up enhanced VQ mode](video-enhancedvq.md)
+   + For information about the **Rate control** fields, see [Setting the rate control mode](video-encode-ratecontrol.md)\. There are fields in this section that affect the output charges for this channel\. For more information about charges, see [the MediaLive price list](https://aws.amazon.com/medialive/pricing/)\.
+   + For information about the **Timecode** fields, see [Timecode configuration](timecode.md)\.
+**Note**  
+The **Width** and **Height** fields \(which define the video resolution\), the fields in the **Framerate** section, and the **Bitrate** field in the **Rate control** section all affect the output charges for this channel\. For more information about charges, see [the MediaLive price list](https://aws.amazon.com/medialive/pricing/)\.
 
-1. Continue setting up the [audio encodes](creating-a-channel-step7.md), video encodes, and [captions encodes](creating-a-channel-step8.md) for all outputs in all output groups\. When you finish with the encodes for all outputs, go to [save the channel](creating-a-channel-step9.md)\.
-
-**To set up the video encodes in the Frame Capture output type**
+**To set up the video encodes in the Frame Capture types of output**
 
 1. On the **Create channel** page, find the output group that you [created](creating-a-channel-step4.md)\. 
 
@@ -28,60 +53,52 @@ The following procedure describes how to set up a video encode and assumes that 
 
 1. When you are ready, go to [save the channel](creating-a-channel-step9.md)\.
 
-## Setting the Rate Control Mode<a name="video-encode-ratecontrol"></a>
+## Creating a video encode by sharing<a name="create-video-share"></a>
 
-This feature does not apply to the video in a Frame Capture output\.
+You can create one video encode and share it among several outputs\. Follow the [earlier procedure](#create-video-scratch) to create the encode once\. Then set up the encode for the other outputs using the following steps\.
 
-The **Rate control** section in the **Video** section of each output on the console lets you control the quality and bitrate of the video\. 
+Note that the procedure for sharing a video encode is nearly identical to the procedure for sharing an audio encode or captions encode\.
 
-When encoding visually complex video \(such as high\-motion sports events with brightly dressed crowds in the background\), there is always a trade\-off between high video quality and low bitrate\. Higher video quality requires higher bitrate\. There is less trade\-off with visually simple video such as cartoons\. 
+**To create a video encode by sharing**
 
-AWS Elemental MediaLive offers several options that provide different balances of video quality versus bitrate\.
+1. On the **Create channel** page, find the output group that you [created](creating-a-channel-step4.md)\. 
 
-**To set the rate control mode and bitrate for the output**
+1. Under that output group, find the output where you want to set up a video encode\.
 
-1. On the **Stream settings** pane, for **Video**, for **Codec settings**, choose **H264**\.
+1. If the output already contains a video encode, choose that video and then choose **Remove video**\.
 
-1. In the **Rate Control** section, for **Rate control mode**, choose **QVBR** or **CBR** or **VBR**\. For information about choosing the best option, see the sections below\.
-   + If you chose **QVBR**, complete **Max bitrate** and **Quality level**\. 
-   + If you chose **VBR**, complete **Bitrate** \(average bitrate\) and **Max bitrate**\.
-   + If you chose **CBR**, complete **Bitrate**\.
+1. Choose **Add video**\. A menu appears that includes the option **Use an existing video description**, followed by a list of the videos that currently exist in the entire channel\.
 
-### Quality\-defined Variable Bitrate Mode \(QVBR\)<a name="video-encode-ratecontrol-qvbr"></a>
+1. Choose the video that you want to use\. On the dialog that appears, choose **Share the existing settings**\.
 
-With quality\-defined variable bitrate mode \(QVBR\), you specify a maximum bitrate and a quality level\. Video quality will match the specified quality level except when it is constrained by the maximum bitrate; this constraint occurs when the video is very complex so that it is not possible to reach the quality level without exceeding the maximum bitrate\. 
+   The fields for this encode appear\. Above the first field is an information message that lists all the outputs that share this encode\. 
 
-We recommend this mode if you or your viewers pay for bandwidth, for example, if you are delivering to a CDN such as Amazon CloudFront or if your viewing users are on mobile networks\.
+   You might want to change the video description to include the term *shared*, as a reminder to yourself\.
 
-**Values to use:** When choosing QVBR, you should set the quality level and maximum bitrate for your most important viewing devices\. Set the buffer size to twice the maximum bitrate, and set the initial buffer to 90%\.
+   Keep in mind that there is only one instance of this encode in the channel\. Therefore, if you change a field, you will change the field in all the other outputs that use this encode\. 
 
+   Remember this rule if you change the **Video selector name** field\. If you specify a different selector in the encode in one output, you change it in all the outputs that share this encode\. If you actually want to specify a different selector, you might need to clone the encode instead of sharing it\.
 
-| Viewing Device | Quality Level | Max Bitrate | 
-| --- | --- | --- | 
-| Primary Screen  | 8 to 10 | 4,000,000 to 6,000,000 | 
-| PC or Tablet | 7 | 1,500,000 to 3,000,000 | 
-| Smartphone | 6 | 1,000,000 to 1,500,000 | 
+## Creating a video encode by cloning<a name="create-video-clone"></a>
 
-**How it works:** The bitrate can change with each frame \(in order to obtain at least the specified quality\), but it can't exceed the maximum bitrate\. The encoder does not attempt to maintain an average bitrate\. It always reaches the maximum bitrate if that is necessary to obtain the specified quality\. On the other hand, if the quality can be obtained with lower bitrates, the encoder doesn't use a higher bitrate\.
+You can create one video encode and clone it among several outputs\. The *source* encode could be an encode that you created from scratch, or it could be an encode that was itself created by cloning\. For example, create *video\-1*, then clone it to *video\-2*, then clone *video\-2* to *video\-3*\.
 
-### Variable Bitrate Mode \(VBR\)<a name="video-encode-ratecontrol-vbr"></a>
+Note that the procedure for cloning a video encode is nearly identical to the procedure for cloning an audio encode or captions encode\.
 
-With variable bitrate mode \(VBR\), you specify an average bitrate and a maximum bitrate\. Video quality and bitrate vary, depending on the video complexity\.
+**To create a video encode by cloning**
 
-Choose VBR instead of QVBR if you want to maintain a specific average bitrate over the duration of the channel\. If bitrate does not need to be constrained, then consider using QVBR\.
+1. On the **Create channel** page, find the output group that you [created](creating-a-channel-step4.md)\. 
 
-**Values to use:** When choosing VBR, you should try to assess the expected complexity of the video, and set a suitable average bitrate\. Set the maximum bitrate to accommodate expected spikes\. Set the buffer size to twice the maximum bitrate, and set the initial buffer to 90%\.
+1. Under that output group, find the output where you want to set up a video encode\.
 
-**How it works:** The bitrate can change with each frame \(in order to obtain the best quality\) but it can't exceed the specified maximum bitrate\. The encoder also ensures that as the channel progresses, the stream meets the specified average bitrate\. This mode is useful when you expect short spikes in the complexity of the video\. The encoder aims for the average bitrate but spikes to the maximum bitrate for a short time when necessary\. 
+1. If there is a **Video** button on the left, choose that button and then choose **Remove video**\.
 
-### Constant Bitrate Mode \(CBR\)<a name="video-encode-ratecontrol-cbr"></a>
+1. Choose **Add video**\. A menu appears that includes the option **Use an existing video description**, followed by a list of the videos that currently exist in the entire channel\.
 
-With constant bitrate mode \(CBR\), you specify a bitrate\. Video quality varies, depending on the video complexity\.
+1. Choose the video encode that you want to use as the source for the new video encode\. 
 
-Choose CBR only if you distribute your assets to devices that cannot handle variable bitrates\. 
+1. On the dialog that appears, choose **Clone the existing settings**\. The fields for the encode appear, with the fields showing the values from the source encode\.
 
-But if it's acceptable for the bitrate to occasionally differ from a specified rate, then consider using VBR or QVBR\. Over the duration of the channel, you might obtain both a lower bitrate and better quality with VBR or QVBR\.
+1. Change any fields, as appropriate\.
 
-**Values to use:** When choosing CBR, set the bitrate to balance the video quality and the output bitrate\. Set the buffer size to twice the bitrate, and set the initial buffer to 90%\.
-
-**How it works:** The output always matches the specified bitrate\. Sometimes that bitrate results in higher\-quality video, and sometimes it results in lower\-quality video\.
+   Keep in mind that this cloned encode is a new encode instance\. If you change fields, you don't affect the source encode\.

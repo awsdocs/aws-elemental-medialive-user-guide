@@ -1,10 +1,10 @@
-# Sidecar Captions and SMPTE\-TT in Microsoft Smooth<a name="output-sidecar-and-smptett-mss"></a>
+# Sidecar captions and SMPTE\-TT in Microsoft Smooth<a name="output-sidecar-and-smptett-mss"></a>
 
-Follow this procedure if the format of the captions asset that you want to add is a sidecar, or if the format is SMPTE\-TT for a Microsoft Smooth output group\. See [ Step 3: Match Formats to Categories](categories-captions.md)\.
+Follow this procedure if the format of the captions asset that you want to add is a sidecar, or if the format is SMPTE\-TT for a Microsoft Smooth output group\. See [Captions categories](categories-captions.md)\.
 
 You set up each captions asset in its own output within the output group\.
 
-**To set up the captions**
+**To set up the output captions**
 
 1. In the channel that you are creating, in the navigation pane, find the output group \(which you have already created\)\. For example, find the HLS output group\.
 
@@ -16,13 +16,13 @@ You set up each captions asset in its own output within the output group\.
 
 1. Choose **Add captions**\. You now have an undefined captions encode inside this output\.
 
-1. For **Captions description name**, enter a name for this captions asset that is unique in the channel, for example, **Web\-VTT Czech**\. Or accept the default \(which is automatically generated\)\. 
+1. For **Captions description name**, enter a name for this captions asset that is unique in the channel, for example, **WebVTT Czech**\. Or accept the default \(which is automatically generated\)\. 
 
-1. For **Captions selector name**, enter the name of the captions selector that you created in [step 1](identify-captions-in-the-input.md)\. Specify the selector that identifies the captions asset that is the source for the captions in this output\.
+1. For **Captions selector name**, enter the name of the captions selector that you created when you [created the captions selectors in the input](identify-captions-in-the-input.md)\. Specify the selector that identifies the captions asset that is the source for the captions in this output\.
 
 1. For **Captions settings**, choose the appropriate format for the output captions\.
 
-1. Complete the fields that appear for the selected format\. For details about a field, choose the Info link beside the field\. 
+1. Complete the fields that appear for the selected format\. For details about a field, choose the Info link beside the field\. For tips about font styles in EBU\-TT\-D, TTML, and WebVTT captions, see [Font styles for EBU\-TT\-D](ebut-tt-font-styles.md), [Font styles for TTML](ttml-font-styles.md) and [Font styles for WebVTT](webvtt-font-styles.md)\. 
 
 1. You now have one output that contains one captions encode that is fully defined\.
 

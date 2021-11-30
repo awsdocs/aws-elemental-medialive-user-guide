@@ -4,7 +4,7 @@ Typically, you create a new user identity for an AWS user only if a person does 
 
 **To create a user**
 
-1. Make sure that you know which group \([Step 4: Create the Groups](setup-user-step-4.md)\) that you want to add each user to\. Make sure that you have already created this group \([Step 4: Create the Groups](setup-user-step-4.md)\)\.
+1. Make sure that you know which group \([Step 4: Create the groups](setup-user-step-4.md)\) that you want to add each user to\. Make sure that you have already created this group \([Step 4: Create the groups](setup-user-step-4.md)\)\.
 
 1. Sign in to the AWS Management Console as an administrator, and open the IAM console at [https://console\.aws\.amazon\.com/iam/](https://console.aws.amazon.com/iam/)\.
 
@@ -24,7 +24,7 @@ Typically, you create a new user identity for an AWS user only if a person does 
 
 1. Select the check box for the appropriate group for this user, and then choose **Next: Tags**\.
 
-1. Add tags if your organization has a policy to create tags for users\. For more information, see [Tagging AWS Elemental MediaLive Resources](tagging.md)\. Then choose **Next: Review**\.
+1. Add tags if your organization has a policy to create tags for users\. For more information, see [Tagging AWS Elemental MediaLive resources](tagging.md)\. Then choose **Next: Review**\.
 
 1. Choose **Create user**\. 
 

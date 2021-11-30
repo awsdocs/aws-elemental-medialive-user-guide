@@ -1,4 +1,4 @@
-# Channel Input—RTP Push Input<a name="input-rtp-push"></a>
+# Channel input—RTP push input<a name="input-rtp-push"></a>
 
 Follow these guidelines to verify that the input is set up correctly\.
 
@@ -10,15 +10,15 @@ Follow these guidelines to verify that the input is set up correctly\.
 
    For example, for an RTP Public input:
 
-   **rtp://203\.59\.21\.50\.0:5000**
+   **rtp://198\.51\.100\.99:5000**
 
-   **rtp://203\.59\.21\.131:5000**
+   **rtp://192\.0\.2\.18:5000**
 
    For example, for an RTP VPC input:
 
-   **rtp://10\.99\.39\.87\.30\.100:5000**
+   **rtp://10\.12\.30\.44:5000**
 
-   **rtp://192\.0\.2\.123:5000**
+   **rtp://10\.99\.39\.15:5000**
 
 1. Look again at the **Input destinations** section\. 
    + If the section has an **Input security group** with a number beside it, then the input is an RTP Public input that has a MediaLive security group\. The input is correctly set up and you can continue\.

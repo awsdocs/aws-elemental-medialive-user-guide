@@ -1,4 +1,4 @@
-# Identifying Permissions<a name="complex-scenario-identify-permissions"></a>
+# Identifying permissions<a name="complex-scenario-identify-permissions"></a>
 
 With the complex option, regular users don't create trusted entity roles\. But they will attach existing roles to the channels that they create by completing the **IAM Role** section in the **Channel and input details** pane\.
 

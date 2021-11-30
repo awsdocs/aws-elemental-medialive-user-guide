@@ -1,4 +1,4 @@
-# Enabling Blanking<a name="procedure-to-enable-ad-avail-blanking"></a>
+# Enabling blanking<a name="procedure-to-enable-ad-avail-blanking"></a>
 
 Follow this procedure if you want to enable the ad avail blanking feature\.
 
@@ -14,14 +14,14 @@ Follow this procedure if you want to enable the ad avail blanking feature\.
 
 1. For **Ad avail offset**, set a value, if desired\. See the help for this field\.
 
-1. In **web\_delivery\_allowed\_flag** and **no\_regional\_blackout\_flag**, choose appropriate values\. For information about these fields, see [Triggers for Ad Avail Blanking](triggers-for-ad-avail-blanking.md)\.
+1. In **web\_delivery\_allowed\_flag** and **no\_regional\_blackout\_flag**, choose appropriate values\. For information about these fields, see [Triggers for ad avail blanking](triggers-for-ad-avail-blanking.md)\.
    + Follow \(default\): Observe the restriction and blank the content for the ad avail event\.
    + Ignore: Ignore the restriction and do *not* blank the content for the ad avail event\.
-**Warning**  
-Never set both fields to Ignore\.
 
-   In **Avail blanking**, in **State**, choose **Enabled**\.
+   Typically set both these fields to Follow\. For more information about what these fields do, see [Ad avail blanking restriction flags](ad-avail-blanking-restriction-flags.md)\.
+
+1. In **Avail blanking**, in **State**, choose **Enabled**\.
 
 1. In **Avail blanking image**, choose the appropriate value:
    + Disable: To use a plain black image for blanking\.
-   + Avail blanking image: To use a special image for blanking\. In the **URL** field, type the path to a file in an S3 bucket\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password parameter for accessing the S3 bucket\. See [About the Feature for Creating Password Parameters](requirements-for-EC2.md#about-EC2Password)\.
+   + Avail blanking image: To use a special image for blanking\. In the **URL** field, type the path to a file in an S3 bucket\. For integration with MediaLive, the bucket name mustn't use dot notation\. For example, `mycompany-videos` is acceptable but `mycompany.videos` isn't\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password parameter for accessing the S3 bucket\. See [About the feature for creating password parameters](requirements-for-EC2.md#about-EC2Password)\.

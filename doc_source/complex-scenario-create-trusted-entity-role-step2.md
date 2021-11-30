@@ -1,8 +1,8 @@
-# Step 2: Create Policies<a name="complex-scenario-create-trusted-entity-role-step2"></a>
+# Step 2: Create policies<a name="complex-scenario-create-trusted-entity-role-step2"></a>
 
 Any person who is an administrator can create a policy\. 
 
-In [Step 1: Determine the Access Requirements](complex-scenario-create-trusted-entity-role-step1.md), someone in your organization identified the policy or policies that you need to create\. 
+In [Step 1: Determine the access requirements](complex-scenario-create-trusted-entity-role-step1.md), someone in your organization identified the policy or policies that you need to create\. 
 
 Create those policies now in IAM\.
 

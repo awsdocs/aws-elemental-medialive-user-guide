@@ -1,4 +1,4 @@
-# Batch Command in Different Interfaces<a name="batchupdatecommand-interfaces"></a>
+# Batch command in different interfaces<a name="batchupdatecommand-interfaces"></a>
 
 The batch update schedule command is represented differently in different interfaces: 
 + In the AWS CLI, the command is `batch-update-schedule`\.

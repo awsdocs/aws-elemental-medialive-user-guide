@@ -1,4 +1,4 @@
-# Setup with Embedded or Object\-style Captions<a name="setup-with-procedure-a-captions"></a>
+# Setup with Embedded or object\-style captions<a name="setup-with-procedure-a-captions"></a>
 
 This example shows how to implement [[the fourth use case](use-case-one-input-format-to-one-output-format-not-converted.md)](use-case-one-captions-output-multiple-video-encodes.md) from the typical scenarios\. For example, you want to produce an HLS output with three video encodes \(one for low\-resolution video, one for medium, one for high\) and one audio\. You also want to include embedded captions \(in English and Spanish\) and associate them with all three video encodes\.
 

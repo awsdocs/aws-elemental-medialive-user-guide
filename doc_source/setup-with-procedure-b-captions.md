@@ -1,4 +1,4 @@
-# Setup with Sidecar Captions<a name="setup-with-procedure-b-captions"></a>
+# Setup with sidecar captions<a name="setup-with-procedure-b-captions"></a>
 
 This example shows an ABR workflow where the captions are in sidecars\. For example, you want to produce a Microsoft Smooth output with three video encodes \(one for low\-resolution video, one for medium, one for high\) and one audio\. These encodes are in a Microsoft Smooth output\. You want to ingest embedded captions \(in English and Spanish\) and convert them to TTML captions, one for English and one for Spanish\. 
 

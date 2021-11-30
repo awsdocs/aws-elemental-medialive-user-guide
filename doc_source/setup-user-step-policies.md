@@ -1,12 +1,12 @@
-# Step 1: Create Customer Managed Policies<a name="setup-user-step-policies"></a>
+# Step 1: Create customer managed policies<a name="setup-user-step-policies"></a>
 
-The procedures in this section show how to create two IAM customer managed policies\. A customer managed policy is one that you create and manage\. \(IAM also includes AWS managed policies, which you can't change\.\) 
+The procedures in this section show how to create three IAM customer managed policies\. A customer managed policy is one that you create and manage\. \(IAM also includes AWS managed policies, which you can't change\.\) 
 
 Anyone with IAM administrator\-level credentials can perform the procedures\. 
 
 The first procedure shows how to create a policy called **MediaLivePowerAccess** that gives full read/write access to AWS Elemental MediaLive\.
 
-The second procedure shows how to create a policy called **MediaConnectPowerAccess** that gives full read/write access to AWS Elemental MediaConnect\.
+The second procedure shows how to create a policy called **MediaConnectPowerAccess** that gives full read/write access to MediaConnect\.
 
 The third procedure shows how to create a policy called **MediaLiveTrustedEntityAccess** that gives access to six operations in AWS IAM\. These actions allow IAM users to create and update a trusted entity role for AWS Elemental MediaLive by setting the fields in the **IAM role** section on the **Channel and input details** page on the MediaLive console\.
 
@@ -17,7 +17,7 @@ The third procedure shows how to create a policy called **MediaLiveTrustedEntity
 1. In the navigation pane, choose **Policies**, and then choose **Create policy**\. On the **Visual editor tab**, follow the prompts to create a policy with these options:
    + **Service**: **MediaLive**
    + **Actions**: **All MediaLive actions \(medialive\.\*\)**
-   + **Resources**: This option is completed automatically
+   + **Resources**: Choose **Resources** to open the section, and choose **All resources**\.
    + **Request conditions**: Omit this option
 
 1. Choose **Review policy**\. 
@@ -35,7 +35,7 @@ The third procedure shows how to create a policy called **MediaLiveTrustedEntity
 1. In the navigation pane, choose **Policies**, and then choose **Create policy**\. On the **Visual editor tab**, follow the prompts to create a policy with these options:
    + **Service**: **MediaConnect**
    + **Actions**: **All MediaConnect actions \(mediaconnect\.\*\)**
-   + **Resources**: This option is completed automatically
+   + **Resources**: Choose **Resources** to open the section, and choose **All resources**\.
    + **Request conditions**: Omit this option
 
 1. Choose **Review policy**\. 
@@ -59,7 +59,7 @@ The third procedure shows how to create a policy called **MediaLiveTrustedEntity
      + **PassRole**
      + **AttachRolePolicy**
      + **PutRolePolicy**
-   + **Resources**: **All resources**
+   + **Resources**: Choose **Resources** to open the section, and choose **All resources**\.
    + **Request conditions**: Omit this option
 
 1. Choose **Review policy**\. 

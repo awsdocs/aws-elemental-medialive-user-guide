@@ -1,4 +1,4 @@
-# All Captions Except Sidecar or SMPTE\-TT in Microsoft Smooth<a name="output-embedded-and-more"></a>
+# All captions except sidecar or SMPTE\-TT in Microsoft Smooth<a name="output-embedded-and-more"></a>
 
 Follow this procedure if the format of the captions asset that you want to add belongs to the category of embedded, burn\-in, or object\. You set up the captions and video and audio in the same output\.
 
@@ -14,7 +14,7 @@ Follow this procedure if the format of the captions asset that you want to add b
 
 1. For **Captions description name**, enter a name for this captions asset that is unique in the channel, for example, **Embedded**\. Or accept the default \(which is automatically generated\)\. 
 
-1. For **Captions selector name**, enter the name of the captions selector that you created in [step 1](identify-captions-in-the-input.md)\. Specify the selector that identifies the captions asset that is the source for the captions in this output\.
+1. For **Captions selector name**, enter the name of the captions selector that you created when you [created the captions selectors in the input](identify-captions-in-the-input.md)\. Specify the selector that identifies the captions asset that is the source for the captions in this output\.
 
 1. For **Captions settings**, choose the captions format for the output captions\. 
 
@@ -22,7 +22,7 @@ Follow this procedure if the format of the captions asset that you want to add b
 
 1. If the output format is embedded and the output group is HLS, you can include captions language information in the manifest\. You perform this setup in the output settings \(separate from the captions encode\)\. See [HLS manifest ](set-up-the-hls-manifest.md)\.
 
-1. If the output format is ARIB or DVB\-Sub or SCTE\-27, you must perform some extra setup in the output settings \(separate from the captions encode\)\. See [PIDS for ARIB output](complete-the-pids-for-arib.md) or [PIDs for DVB\-Sub output](complete-the-pids-for-dvb-sub.md) or [PIDs for SCTE\-27](complete-the-pids-for-scte27.md) or [PIDs for Teletext output](complete-the-pids-for-teletext.md)\.
+1. If the output format is ARIB or DVB\-Sub , you must perform some extra setup in the output settings \(separate from the captions encode\)\. See [PIDS for ARIB output](complete-the-pids-for-arib.md) or [PIDs for DVB\-Sub output](complete-the-pids-for-dvb-sub.md)\.
 
 1. You now have a captions encode that is fully defined\.
 

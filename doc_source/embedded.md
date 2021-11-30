@@ -1,13 +1,13 @@
-# Information for Embedded<a name="embedded"></a>
+# Information for embedded<a name="embedded"></a>
 
 Read this section if the input captions are any of the following: embedded \(EIA\-608 or CEA\-708\), embedded\+SCTE\-20, SCTE\-20\+embedded, or SCTE\-20\.
 
-**How Many Captions Selectors?**
-+ If you are setting up for embedded passthrough, create only one captions selector\. With this scenario, all languages are automatically extracted and are automatically included in the output\.
-+ If you are setting up for embedded\-to\-other, create one captions selector for each language that you want to include in the output, to a maximum of four selectors\.
-+ If you are setting up for embedded passthrough in some outputs and embedded\-to\-other in other outputs, create one captions selector for each language that you want to include in the output, to a maximum of four selectors\. Don't worry about a selector for the embedded passthrough output\. MediaLive extracts all the languages for that output, even though there is not a selector to explicitly specify this action\. 
+**How many captions selectors?**
++ **Embedded passthrough** – Create only one captions selector\. With this scenario, all languages are automatically extracted and are automatically included in the output\.
++ **Embedded in, other out** – Create one captions selector for each language that you want to include in the output, to a maximum of four selectors\.
++ **A combination of Embedded passthrough and Embedded conversion** – If you are setting up for embedded passthrough in some outputs and embedded\-to\-other in other outputs, create one captions selector for each language that you want to include in the output, to a maximum of four selectors\. Don't worry about a selector for the embedded passthrough output\. MediaLive extracts all the languages for that output, even though there is not a selector to explicitly specify this action\. 
 
-**Captions Selector Fields**
+**Captions selector fields**
 + **Selector settings**: 
   + Choose embedded if the source captions are embedded \(EIA\-608 or CEA\-708\), embedded\+SCTE\-20, or SCTE\-20\+embedded\.
   + Choose SCTE\-20 if the source captions are SCTE\-20 alone\.

@@ -1,8 +1,25 @@
-# Creating an MP4 Pull Input<a name="mp4-pull-input"></a>
+# Creating an MP4 pull input<a name="mp4-pull-input"></a>
 
 Create your input before you create the channel that ingests the input\. 
 
+For information about the files that MediaLive supports as MP4 inputs, see [Reference: Supported input containers and codecs](inputs-supported-containers.md)\. 
+
+You can set up an MP4 source as a single\-class or a standard\-class input\. You should have already read [Implementing pipeline redundancy](plan-redundancy-mode.md), to decide the class of channel and class of input that you want\.
+
 **To create an MP4 pull input**
+
+1. You should have already arranged with the video content provider to [set up the upstream system](mp4-upstream.md) for your content\. Make sure that the operator of the upstream system gives you the following information:
+   + The full URLs of the locations where MediaLive will pull the MP4 files from\. For example:
+
+     `s3ssl://DOC-EXAMPLE-BUCKET/filler-videos/main/oceanwaves.mp4` 
+
+     `s3ssl://DOC-EXAMPLE-BUCKET/filler-videos/redundant/oceanwaves.mp4`
+
+1. If this input is being used in a multiple\-input channel, you should have decided whether to set it up as a static input or a [dynamic input](dynamic-inputs.md)\. You might need to modify the URLs you obtained from the upstream system:
+   + If the input is a static input, don't modify the URLs\.
+   + If the input is a dynamic input, set up the URL as an optional absolute portion and a required variable portion \($urlPath$\)\. For examples, see the table after this procedure\.
+
+     We recommend that you use the format <protocol>/$urlPath$\.
 
 1. Open the MediaLive console at [https://console\.aws\.amazon\.com/medialive/](https://console.aws.amazon.com/medialive/)\.
 
@@ -10,27 +27,21 @@ Create your input before you create the channel that ingests the input\.
 
 1. On the **Inputs** page, choose **Create input**\.
 
-1. In the **Input details** section, for **Input** name, enter a name\.
+1. Complete the **Input details** section:
+   + **Input** name – enter a name\.
+   + **Input type** – choose **MP4**\. 
 
-1. For **Input type**, choose **MP4**\. 
+1. In the **Input class** section, choose the class for this input:
+   + STANDARD\_INPUT
+   + SINGLE\_INPUT
 
-1. From the upstream system, obtain the full URLs of the locations where MediaLive will pull the MP4 file from\. The upstream system will provide two URLs \(for a [standard channel](plan-redundancy-mode.md)\) or one URL \(for a single\-pipeline channel\):
-   + For an upstream system that uses HTTP or HTTPS, enter an HTTP or HTTPS URL\. For example:
+1. In the **Input sources** section, enter the URLs you previously obtained: 
+   + If the input is a standard\-class input, complete both fields, to provide two URLs\.
+   + If the input is a single\-class input, complete the first field with the URL that you obtained and leave the second field empty\.
 
-     `https://203.0.113.13/fillervideos/oceanwaves.mp4` and 
+   If the upstream system requires that you provide user credentials, you must also enter the user name and password key for accessing the location\. These credentials are stored on the Systems Manager Parameter Store\. For more information, see [About the feature for creating password parameters](requirements-for-EC2.md#about-EC2Password)\.
 
-     `https://203.0.113.54/fillervideos/oceanwaves.mp4` 
-   + For a file that is stored on Amazon S3, enter the protocol as **s3** or **s3ssl**, and then enter the bucket name and object for the manifest\. For example:
-
-     `s3://fillervideos/main/oceanwaves.mp4` and `s3://fillervideos/redundant/oceanwaves.mp4` 
-
-1. In the **Input sources** section, enter these URLs in one or both fields: 
-   + If the channel for this input will be set up as a [standard channel](plan-redundancy-mode.md), complete both fields, to provide two URLs\.
-   + If the channel for this input will be set up as a single\-pipeline channel, complete the first field with the URL that you obtained and leave the second field empty\.
-
-1. If you use a secure connection \(s3ssl\), you must also enter the user name and Amazon EC2 password key for accessing the location\. These credentials are stored on the Amazon EC2 Systems Manager Parameter Store\. For more information, see [About the Feature for Creating Password Parameters](requirements-for-EC2.md#about-EC2Password)\.
-
-1. In the **Tags **section, create tags if you want to associate tags with this input\. For more information, see [Tagging AWS Elemental MediaLive Resources](tagging.md)\.
+1. In the **Tags **section, create tags if you want to associate tags with this input\. For more information, see [Tagging AWS Elemental MediaLive resources](tagging.md)\.
 
 1. Choose **Create**\.
 
@@ -39,3 +50,14 @@ Create your input before you create the channel that ingests the input\.
    When you start the channel, MediaLive will connect to the upstream system at this source location or locations and pull the content: 
    + For a standard channel, MediaLive expects the upstream system to provide two sources and will therefore attempt to pull from both source locations\.
    + For a single\-pipeline channel, MediaLive expects the upstream system to provide one source and will therefore attempt to pull from one source location\. 
+
+## Formats for the URL in a dynamic input<a name="input-dynamic-urlpath"></a>
+
+The following table describes the different formats for the URL in a dynamic input\. 
+
+
+| Format | Description | Example | Example of the $urlPath$ | 
+| --- | --- | --- | --- | 
+| <protocol>/$urlPath$ | URL has only the protocol in the absolute portion | s3ssl://$urlPath$ | DOC\-EXAMPLE\-BUCKET/my\-movie\.mp4 | 
+| <protocol and path>/$urlPath$ | URL has the protocol and path in the absolute portion | emsssl://f31z\.data\.mediastore\.us\-west\-2\.amazonaws\.com/movies/$urlPath$  | my\-movie\.mp4 | 
+| $urlPath$ | URL has only the variable portion | $urlPath$ | s3ssl://DOC\-EXAMPLE\-BUCKET/my\-movie\.mp4 | 

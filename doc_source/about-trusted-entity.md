@@ -1,4 +1,4 @@
-# About the Trusted Entity Role<a name="about-trusted-entity"></a>
+# About the trusted entity role<a name="about-trusted-entity"></a>
 
 AWS Elemental MediaLive must be set up so that when a channel is running, MediaLive itself has access to perform operations on resources that belong to your organization's AWS account\. For example, your deployment might use AWS Elemental MediaStore as a source for files, such as blackout images, that MediaLive requires during processing\. For MediaLive to obtain these files, it must have read access to some or all containers in MediaStore\.
 

@@ -1,4 +1,4 @@
-# Step 4: Revise the Trust Relationship<a name="complex-scenario-create-trusted-entity-role-step4"></a>
+# Step 4: Revise the trust relationship<a name="complex-scenario-create-trusted-entity-role-step4"></a>
 
 Any person who is an administrator can perform this procedure\. 
 
@@ -37,4 +37,4 @@ When you created the role and established the trusted relationship, you chose EC
 
    In the example, `111122223333` is your AWS account number\. 
 
-1. Make a list of all the role ARNs, and include a description of the workflow and users for each\. You will need this list in [Step 6: Setting Up Required Data](setup-user-step-6.md)\.
+1. Make a list of all the role ARNs, and include a description of the workflow and users for each\. You will need this list in [Step 6: Setting up required data](setup-user-step-6.md)\.

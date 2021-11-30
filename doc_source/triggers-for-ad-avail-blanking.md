@@ -1,15 +1,15 @@
-# Triggers for Ad Avail Blanking<a name="triggers-for-ad-avail-blanking"></a>
+# Triggers for ad avail blanking<a name="triggers-for-ad-avail-blanking"></a>
 
 For ad avail blanking, the ad avail mode that you set controls which SCTE\-35 events result in the blanking of the content\.
 
-## Triggers in Splice Insert Mode<a name="triggers-splice-insert-mode"></a>
+## Triggers in splice insert mode<a name="triggers-splice-insert-mode"></a>
 
 This section describes which message type and segmentation type combination is blanked by ad avail blanking when the Ad Avail mode is Splice Insert mode\. 
 
 
-**Message Type ID: Splice Insert**  
+**Message type ID: Splice insert**  
 
-| Segmentation Type ID | Blanked | 
+| Segmentation type ID | Blanked | 
 | --- | --- | 
 | No segmentation descriptor present | Yes | 
 | Provider advertisement | Yes | 
@@ -18,23 +18,23 @@ This section describes which message type and segmentation type combination is b
 | Other: Programs, Chapters, Network, Unscheduled | No | 
 
 
-**Message Type ID: Time Signal**  
+**Message type ID: Time signal**  
 
-| Segmentation Type ID | Blanked | 
+| Segmentation type ID | Blanked | 
 | --- | --- | 
 | Provider advertisement | Yes | 
 | Distributor advertisement | Yes | 
 | Placement opportunity | Yes | 
 | Other: Programs, Chapters, Network, Unscheduled | No | 
 
-## Triggers in Timesignal APOS Mode<a name="triggers-timesignal-mode"></a>
+## Triggers in timesignal APOS mode<a name="triggers-timesignal-mode"></a>
 
 This section describes which message type/segmentation type combination is blanked by ad avail blanking when the Ad Avail mode is Timesignal with APOS mode\. 
 
 
-**Message Type ID: Splice Insert**  
+**Message l ID: Splice insert**  
 
-| Segmentation Type ID | Blanked | 
+| Segmentation type ID | Blanked | 
 | --- | --- | 
 | No segmentation descriptor present | No | 
 | Provider advertisement | No | 
@@ -43,9 +43,9 @@ This section describes which message type/segmentation type combination is blank
 | Other: Programs, Chapters, Network, Unscheduled | No | 
 
 
-**Message Type ID: Time Signal**  
+**Message type ID: Time signal**  
 
-| Segmentation Type ID | Blanked | 
+| Segmentation type ID | Blanked | 
 | --- | --- | 
 | Provider advertisement | No | 
 | Distributor advertisement | No | 

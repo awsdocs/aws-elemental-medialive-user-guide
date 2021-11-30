@@ -1,15 +1,13 @@
-# HLS Output<a name="hls-output"></a>
+# HLS output<a name="hls-output"></a>
 
-HLS output supports both passthrough of the SCTE\-35 messages and manifest decoration\. With HLS outputs, passthrough and manifest decoration are either both enabled or both disabled\.
+In an HLS output \(a transport stream\), MediaLive supports SCTE\-35 features as follows:
++ Passthrough of the SCTE\-35 messages – Supported\.
++ Manifest decoration – Supported\.
++ Blanking and blackout – Applicable\. Content in the output is blanked or blacked out if the features are enabled at the channel level\.
 
-The following table shows the valid processing options\.
-
-
-****  
-
-| SCTE\-35 Passthrough | Manifest Decoration | Blanking and Blackout | Effect | 
-| --- | --- | --- | --- | 
-| Enabled | Enabled | Yes or No | Turns on passthrough of SCTE\-35 messages and manifest decoration\. You could also implement blanking and blackout\. | 
-| Disabled | Disabled | No |  Turns off passthrough, to remove SCTE\-35 messages from the video stream\. Turns off manifest decoration\. Do not implement blanking or blackout\.  Choose this option only if, in a downstream system, you don't want to replace video that was originally marked by cues\.   | 
-
-Note that with HLS you must either enable passthrough and decoration in all outputs in the same output group, or disable them in all outputs in the same output group\.
+MediaLive supports the following combinations of passthrough and manifest decoration:
++ Passthrough enabled, decoration enabled\.
++ Passthrough disabled, decoration enabled\.
++ Passthrough disabled, decoration disabled\. Be careful of setting up with this combination but leaving blanking and blackout disabled\. In this case, the video content that was marked by messages \(in the input\) are not marked \(in the output\)\. In addition, the manifests don't have information for identifying that video content\. 
+  + If you have the rights to that video content, there is no problem setting up this way\.
+  + If you don't have the rights, the only way to find that content is to look for the IDR i\-frames that identify where the SCTE\-35 message used to be\.

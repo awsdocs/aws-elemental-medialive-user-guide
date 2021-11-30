@@ -1,4 +1,4 @@
-# Working with ID3 Metadata<a name="id3-metadata"></a>
+# Working with ID3 metadata<a name="id3-metadata"></a>
 
 You can include ID3 metadata in Archive outputs, HLS outputs, MediaPackage outputs, and UDP outputs\. Typically, you include ID3 metadata in an output if you know that a downstream system expects the data and is capable of interpreting it\. 
 
@@ -12,7 +12,7 @@ When you are creating or editing a channel, you can set up individual outputs in
 ID3 metadata is included in the Archive, HLS, MediaPackage, or UDP output according to the [specific rules](enable-passthrough-id3.md#id3-enable-result) for the output type\. 
 
 **Topics**
-+ [Enabling ID3 Metadata](enable-passthrough-id3.md)
-+ [Passing Through ID3 Metadata](passthru-metadata.md)
-+ [Inserting ID3 Metadata When Creating the Channel](insert-timed-metadata.md)
-+ [Inserting ID3 Metadata Using the Schedule](insert-usercreated-metadata.md)
++ [Enabling ID3 metadata](enable-passthrough-id3.md)
++ [Passing through ID3 metadata](passthru-metadata.md)
++ [Inserting ID3 metadata when creating the channel](insert-timed-metadata.md)
++ [Inserting ID3 metadata using the schedule](insert-usercreated-metadata.md)

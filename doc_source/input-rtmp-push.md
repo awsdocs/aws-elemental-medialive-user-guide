@@ -1,4 +1,4 @@
-# Channel Input—RTMP Push Input<a name="input-rtmp-push"></a>
+# Channel input—RTMP push input<a name="input-rtmp-push"></a>
 
 Follow these guidelines to verify that the input is set up correctly\.
 
@@ -12,15 +12,15 @@ Follow these guidelines to verify that the input is set up correctly\.
 
    For example, for an RTMP Public push input:
 
-   **rtmp://203\.0\.113\.111:1935/movies/classic**
+   **rtmp://198\.51\.100\.99:1935/live/curling**
 
-   **rtmp://203\.0\.113\.22:1935/movies/classic**
+   **rtmp://192\.0\.2\.18:1935/live/curling**
 
    For example, for an RTMP VPC push input:
 
-   **rtmp://10\.99\.20\.40:1935**
+   **rtmp://10\.12\.30\.44:1935/live/curling**
 
-   **rtmp://192\.0\.2\.131:1935**
+   **rtmp://10\.99\.39\.15:1935/live/curling**
 
 1. Look again at the **Input destinations** section\. 
    + If the section has an **Input security group** with a number beside it, then the input is an RTMP Public input that has a MediaLive security group\. The input is correctly set up and you can continue\.

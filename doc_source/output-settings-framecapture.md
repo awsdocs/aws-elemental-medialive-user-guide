@@ -1,11 +1,5 @@
-# Settings for a Frame Capture Output<a name="output-settings-framecapture"></a>
+# Settings for the stream<a name="output-settings-framecapture"></a>
 
-On the **Output** page for a Frame Capture output group, you provide information about the still images to create\.
+By default, the output is set up with one video encode\. This is the only encode that a frame capture output can contain\. Therefore, you can't add audio or captions encodes or more video encodes\.
 
-## Output Settings Section<a name="framecapture-output-section"></a>
-
-For **Name modifier**, enter a name as described in [Frame Capture Destinations](framecapture-group-fields.md#framecapture-destinations)\.
-
-## Streams Section<a name="framecapture-streams-section"></a>
-
-For information about the fields in the video encode, see [Step 7: Set Up the Video Encode](creating-a-channel-step6.md)\.
+For information about the fields in the video encode, see [Step 6: Set up the video encode](creating-a-channel-step6.md)\.

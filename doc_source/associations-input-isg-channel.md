@@ -1,4 +1,4 @@
-# How Components Are Associated<a name="associations-input-isg-channel"></a>
+# How components are associated<a name="associations-input-isg-channel"></a>
 
 The association between inputs and a channel is defined in the channel\. In other words, to associate a channel with one or more inputs, you set up the channel to point to those inputs\. 
 

@@ -1,4 +1,4 @@
-# Creating an Administrator User with Limited Access<a name="setting-up-restricted-admin"></a>
+# Creating an administrator user with limited access<a name="setting-up-restricted-admin"></a>
 
 If you are a full\-access administrator, you can create other administrator users and assign each one a different level of access\. These administrator users have more access than non\-administrator users \("regular" users\), but they have less access than full\-access administrator users\. They can use AWS Elemental MediaLive in the same way as regular users, but they can also create non\-administrative users and set up some of the services that MediaLive integrates with\. 
 
@@ -15,7 +15,7 @@ The following procedure shows how to create an administrative user who has limit
 
 1. In the navigation pane, choose **Policies**, and then choose **Create policy**\. On the **Create policy** page, choose the **Visual editor** tab\. This tab is a policy generator that lets you build a policy by selecting actions from a list to add them to the policy\. 
 
-1. Read the table at the end of this procedure, and create a policy that gives access to the actions that aren't already covered by an existing policy\. You don't need to create a policy when we suggest using an existing policy\. For information about the purpose of these actions, see [Step 1: Identify Requirements for Permissions for Users](setup-user-step-1.md)\.
+1. Read the table at the end of this procedure, and create a policy that gives access to the actions that aren't already covered by an existing policy\. You don't need to create a policy when we suggest using an existing policy\. For information about the purpose of these actions, see [Step 1: Identify requirements for permissions for users](setup-user-step-1.md)\.
 
 1. To create the policy, follow the prompts on the console\. Here are some tips for creating the policy:
    + You can create one policy that covers several services\. You don't need to create a policy for each separate service\. To create a policy for several services, choose the actions for one service, and then choose **Add additional permissions** at the bottom of the page to set up another service\. You might need to move both of the vertical scroll bars to the bottom to display this link\. 

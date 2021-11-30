@@ -1,4 +1,4 @@
-# Creating an Administrator IAM User<a name="preproduction-create-iam-admin"></a>
+# Creating an administrator IAM user<a name="preproduction-create-iam-admin"></a>
 
 The procedures in this section show how to create an IAM user that has full read/write administrator permissions\. This administrator might be you or another person\. You set up an administrator by creating a group, and then creating a user that belongs to that group:
 + If your organization is new to AWS, follow both steps in this procedure: create the group, and then create the users for that group\.

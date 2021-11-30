@@ -1,10 +1,10 @@
-# Viewing the Schedule \(AWS CLI\)<a name="viewing-schedule-using-cli"></a>
+# Viewing the schedule \(AWS CLI\)<a name="viewing-schedule-using-cli"></a>
 
 You can use the AWS CLI to view a list of the actions that are currently in the schedule for one channel:
-+ Actions that have not yet been executed in the channel
-+ Actions that have been executed within the last hour 
++ Actions that have not yet been performed in the channel
++ Actions that have been performed within the last hour 
 
-To view the schedule, you use the `DescribeSchedule` command\. This command is represented differently in different interfaces:
+To view the schedule, use the `DescribeSchedule` command\. This command is represented differently in different interfaces:
 + In the AWS CLI, the command is `describe-schedule`\.
 + In the API, the command is represented by an `HTTP GET` on `channels/channelId/schedule`\.
 + In the AWS SDKs, the command is represented by constructs that are suitable to that SDK language\. 
@@ -28,13 +28,13 @@ To view the schedule, you use the `DescribeSchedule` command\. This command is r
 The JSON body of the command *response* is similar to that of the `BatchUpdateSchedule` command *request*\.
 
 This example of a response shows the following actions:
-+ An action with the `ActionName` "**corporate\_logo\_029**" to activate an image overlay in layer 1 at 20:30:00 UTC
-+ An action with the `ActionName` "**stop\_overlay\_029**" to deactivate the overlay in layer 1 at 20:42:04 UTC
-+ An action with the `ActionName` "**adavail\_3708**" to insert a splice\_insert at the same time as the deactivate action
-+ An action with the `ActionName` "**end\_adavail\_3708**" to return\-to\-network 15 seconds later, at 20:42:19 UTC
-+ An action with the `ActionName` "**corporate\_logo\_030**" to reactivate the same overlay in layer 1 at the same time as the return
++ An action with the `ActionName` **corporate\-logo\-029** to activate an image overlay in layer 1 at 20:30:00 UTC
++ An action with the `ActionName` **stop\-overlay\-029** to deactivate the overlay in layer 1 at 20:42:04 UTC
++ An action with the `ActionName` **adavail\-3708** to insert a splice\_insert at the same time as the deactivate action
++ An action with the `ActionName` **end\-adavail\-3708** to return\-to\-network 15 seconds later, at 20:42:19 UTC
++ An action with the `ActionName` **corporate\-logo\-030** to reactivate the same overlay in layer 1 at the same time as the return
 
-This schedule describes a workflow where you generally show your corporate logo, but you remove it at the start of each ad avail and then display it again at the end of the ad avail:
+This schedule describes a workflow where you generally show your corporate logo, but you remove it at the start of each ad avail and then display it again at the end of the ad avail\.
 
 ```
  {
@@ -46,12 +46,12 @@ This schedule describes a workflow where you generally show your corporate logo,
             "Time": "2018-05-21T20:30:00.000Z"
           }
         },
-        "ActionName": "corporate_logo_029",
+        "ActionName": "corporate-logo-029",
         "ScheduleActionSettings": {
           "StaticImageActivateSettings": {
             "Image": {
             "PasswordParam": "corplogo!2312",
-            "Uri": "s3ssl://logos/corporate/high-res.bmp",
+            "Uri": "s3ssl://DOC-EXAMPLE-BUCKET/logos/corporate/high-res.bmp",
             "Username": "medialiveoperator"
             },
             "ImageY": 300,
@@ -70,7 +70,7 @@ This schedule describes a workflow where you generally show your corporate logo,
             "Time": "2018-05-21T20:42:04.000Z"
           }
         },
-        "ActionName": " stop_overlay_029",
+        "ActionName": " stop-overlay-029",
         "ScheduleActionSettings": {
           "StaticImageDeactivateSettings": {
             "FadeOut": 1500,
@@ -84,7 +84,7 @@ This schedule describes a workflow where you generally show your corporate logo,
             "Time": "2018-05-21T20:42:04.000Z"
           }
         },
-        "ActionName": "adavail_3708",
+        "ActionName": "adavail-3708",
         "ScheduleActionSettings": {
           "Scte35SpliceInsertSettings": {
             "SpliceEventId": 3708,
@@ -98,7 +98,7 @@ This schedule describes a workflow where you generally show your corporate logo,
             "Time": "2018-05-21T20:42:19.000Z"
           }
         },
-        "ActionName": "end_adavail_3708",
+        "ActionName": "end-adavail-3708",
         "ScheduleActionSettings": {
           "Scte35ReturnToNetworkSettings": {
             "SpliceEventId": 3708
@@ -111,12 +111,12 @@ This schedule describes a workflow where you generally show your corporate logo,
             "Time": "2018-05-21T20:42:19.000Z"
           }
         },
-        "ActionName": "corporate_logo_030",
+        "ActionName": "corporate-logo-030",
         "ScheduleActionSettings": {
           "StaticImageActivateSettings": {
             "Image": {
             "PasswordParam": "corplogo!2312",
-            "Uri": "s3ssl://logos/corporate/high-res.bmp",
+            "Uri": "s3ssl://DOC-EXAMPLE-BUCKET/logos/corporate/high-res.bmp",
             "Username": "medialiveoperator"
             },
             "ImageY": 300,

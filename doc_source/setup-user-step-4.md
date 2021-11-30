@@ -1,4 +1,4 @@
-# Step 4: Create the Groups<a name="setup-user-step-4"></a>
+# Step 4: Create the groups<a name="setup-user-step-4"></a>
 
 Any person who is an administrator can perform this procedure\. Follow the procedure once, when setting up users for production\. 
 
@@ -6,7 +6,7 @@ After you identify the different sets of users that your deployment requires, yo
 
 **To create the groups**
 
-1. In IAM, choose **Groups**, and then use the **Create New Group Wizard** to create a group for each set of users that you identified in [Step 2: Identify Categories of Users](setup-user-step-2.md)\. See [http://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html) and follow the steps for creating groups using the console\.
+1. In IAM, choose **Groups**, and then use the **Create New Group Wizard** to create a group for each set of users that you identified in [Step 2: Identify categories of users](setup-user-step-2.md)\. See [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_groups_create.html) and follow the steps for creating groups using the console\.
 
    As a best practice, assign group names that start with the service name, `medialive`\.
 

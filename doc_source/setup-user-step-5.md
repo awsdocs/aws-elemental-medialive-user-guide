@@ -1,4 +1,4 @@
-# Step 5: Create or Modify each IAM User<a name="setup-user-step-5"></a>
+# Step 5: Create or modify each IAM user<a name="setup-user-step-5"></a>
 
 Any person who is an administrator can perform this step\. Follow this procedure when setting up users for production\. After the initial setup, perform this procedure whenever you need to set up a new user\.
 
@@ -8,4 +8,4 @@ This procedure describes how to set up the user for console access, but not for 
 
 **Topics**
 + [Create a User](setup-user-create-user.md)
-+ [Modify an Existing User](setup-user-modify-user.md)
++ [Modify an existing user](setup-user-modify-user.md)

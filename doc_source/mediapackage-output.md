@@ -1,12 +1,6 @@
-# MediaPackage Output<a name="mediapackage-output"></a>
+# MediaPackage output<a name="mediapackage-output"></a>
 
-MediaPackage output, which is a type of HLS output, supports both passthrough of the SCTE\-35 messages and manifest decoration\. With MediaPackage outputs, passthrough and manifest decoration are always enabled and can't be disabled\.
-
-The following table shows the valid processing option\.
-
-
-****  
-
-| SCTE\-35 Passthrough | Manifest Decoration | Blanking and Blackout | Effect | 
-| --- | --- | --- | --- | 
-| Enabled | Enabled | Yes or No | Passthrough of SCTE\-35 messages and manifest decoration are always enabled and can't be disabled\. You could also implement blanking and blackout\. | 
+In a MediaPackage output, MediaLive supports SCTE\-35 features as follows:
++ Passthrough of the SCTE\-35 messages – Always enabled\.
++ Manifest decoration – Always enabled\.
++ Blanking and blackout – Applicable\. Content in the output is blanked or blacked out if the features are enabled at the channel level\.

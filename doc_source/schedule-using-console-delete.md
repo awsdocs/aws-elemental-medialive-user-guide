@@ -1,14 +1,29 @@
-# Deleting Actions from the Schedule \(Console\)<a name="schedule-using-console-delete"></a>
+# Deleting actions from the schedule \(console\)<a name="schedule-using-console-delete"></a>
 
-You can delete actions that you previously created in the schedule, so long as the action has not been received by the channel\. You can delete an action when the channel is running or when it is idle\. 
+These rule apply when you add delete actions to the schedule:
++ In a single\-input channel \(a channel that doesn't involve input switching\), you can delete actions as follows: 
+  + You can delete an action with a start time that is more than 15 seconds in the future\. The channel won't perform the action\.
+  + You can delete an action that has already been performed\. Deleting this action doesn't reverse the action, it only removes it from the schedule\.
++ In a multiple\-input channel, you can delete actions as follows:
+  + You can delete an action with a start time that is more than 15 seconds in the future\. The channel won't perform the action\.
 
-The action that you delete must have a UTC start time or a follow start time \(for input switches\) that is at least 15 seconds in the future\. \(In other words, it must not be already received in the channel\.\) After that cutoff, AWS Elemental MediaLive rejects the delete request\.
+    There are some constraints that apply to deleting inputs switches and input prepare, event when they are in the future\. For more information, see [Deleting actions from the schedule](ips-manage-schedule.md) and [Deleting and stopping input prepare actions](input-prep-delete.md)\.
+  + You can delete an action that has already been performed\. Deleting this action doesn't reverse the action, it only removes it from the schedule\.
+
+    There are some constraints that apply to deleting inputs switches and input prepare, event when they are in the future\. For more information, see [Deleting actions from the schedule](ips-manage-schedule.md) and [Deleting and stopping input prepare actions](input-prep-delete.md)\.
+
+**Deleting versus reversing**
+
+It is important to understand that deleting a stale action from the schedule doesn't reverse its effect in the channel\. For example, if you have paused the channel, and the channel has performed the action, you unpause the channel by entering a new action\. You don't unpause it by deleting the action\.
+
+**Note**  
+If the channel has already received the action, you might be able to modify it to effectively delete it\. For more information, see [Modifying actions in the schedule \(console\)](schedule-modify.md)\.
 
 You can delete any number of actions in one request, or any combination of types of actions in one request\. For example, you can mix the deletion of SCTE\-35 message actions and image overlay actions\.
 
 The general procedure is the same to delete any type of action\.
 
-**To delete actions in List view**
+**To delete actions in list view**
 
 1. Open the MediaLive console at [https://console\.aws\.amazon\.com/medialive/](https://console.aws.amazon.com/medialive/)\.
 
@@ -16,15 +31,15 @@ The general procedure is the same to delete any type of action\.
 
 1. On the **Details** pane, choose the **Schedule** tab\.
 
-1. If necessary, choose the **Switch** button to display the **List** view\. For information about the layout and color coding of the timeline view, see [Viewing the Schedule \(Console\)](schedule-using-console-view.md)\.
+1. If necessary, choose the **Switch** button to display the **List** view\. For information about the layout and color coding of the timeline view, see [Viewing the schedule \(console\)](schedule-using-console-view.md)\.
 
-1. Choose one or more actions to delete\. Make sure that you choose actions with a UTC start time in the future\.
+1. Choose one or more actions to delete\.
 
-   If you choose an input switch that is in a follow chain, a prompt appears to notify you that the follow actions below this action \(up to the next fixed input switch\) will also be deleted\. You can cancel or continue\. 
+   If you choose an input switch that is in an input follow chain, a prompt appears\. This prompt notifies you that all the follow input switch actions and the follow SCTE\-35 actions up to the next fixed input switch will also be deleted\. You can cancel or continue\. 
 
    Choose **Actions**, and then choose **Delete**\.
 
-**To delete actions in Timeline view \(console\)**
+**To delete actions in timeline view \(console\)**
 
 1. Open the MediaLive console at [https://console\.aws\.amazon\.com/medialive/](https://console.aws.amazon.com/medialive/)\.
 
@@ -32,8 +47,8 @@ The general procedure is the same to delete any type of action\.
 
 1. On the **Details** pane, choose the **Schedule** tab\.
 
-1. If necessary, choose the **Switch** button to display the **Timeline** view\. For information about the layout and color coding of the timeline view, see [Viewing the Schedule \(Console\)](schedule-using-console-view.md)\.
+1. If necessary, choose the **Switch** button to display the **Timeline** view\. For information about the layout and color coding of the timeline view, see [Viewing the schedule \(console\)](schedule-using-console-view.md)\.
 
-1. In each action section, choose the **X** to delete the action\. Make sure that you choose actions with a UTC start time in the future\.
+1. In each action section, choose the **X** to delete the action\.
 
-   If you choose an input switch that is in a follow chain, a prompt appears to notify you that the follow actions below this action \(up to the next fixed input switch\) will also be deleted\. You can cancel or continue\. 
+   If you choose an input switch that is in an input follow chain, a prompt appears to notify you that the follow actions below this action \(up to the next fixed input switch\) will also be deleted\. You can cancel or continue\. 

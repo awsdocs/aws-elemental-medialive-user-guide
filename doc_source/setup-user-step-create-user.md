@@ -1,11 +1,11 @@
-# Step 3: Create or Add an IAM User to Your Group<a name="setup-user-step-create-user"></a>
+# Step 3: Create or add an IAM user to your group<a name="setup-user-step-create-user"></a>
 
 The procedure in this section shows how to create or edit an IAM user identity\. Anyone with IAM administrator\-level credentials can perform the procedure\. Perform this step for each user\.
 
 **Note**  
 This procedure shows how to set up an IAM user for console access, but not for AWS CLI or AWS SDK access\. To set up for programmatic access, see the [https://docs.aws.amazon.com/IAM/latest/UserGuide/](https://docs.aws.amazon.com/IAM/latest/UserGuide/)\. 
 
-## Creating an IAM User and Adding the User to Your Group<a name="preproduction-create-user"></a>
+## Creating an iam user and adding the user to your group<a name="preproduction-create-user"></a>
 
 Typically, you create an IAM user identity for an AWS user only if a person doesn't have an existing identity\. If the person already has an IAM user identity, you can [modify their access](#preproduction-modify-user) instead\.
 
@@ -41,7 +41,7 @@ Repeat the steps to add more IAM users\. As an example, the following diagram sh
 
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images/preprod_usersetup_group+policies+users.png)
 
-## Adding an Existing IAM User to Your Group<a name="preproduction-modify-user"></a>
+## Adding an existing IAM user to your group<a name="preproduction-modify-user"></a>
 
 You can add an existing IAM user to a group that you create for AWS Elemental MediaLive, even if the user is already a member of other groups\. In this procedure, you add the user to the **MediaLivePowerUsers** group that you created in [Step 2: Create a Group](setup-user-step-groups.md)\.
 

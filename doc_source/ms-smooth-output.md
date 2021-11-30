@@ -1,11 +1,14 @@
-# Microsoft Smooth Output<a name="ms-smooth-output"></a>
+# Microsoft Smooth output<a name="ms-smooth-output"></a>
 
-Microsoft Smooth output does not support passthrough of the SCTE\-35 messages, but does support instructions in the sparse track\. The following table shows the valid processing options\.
+In a Microsoft Smooth output, MediaLive supports SCTE\-35 features as follows:
++ Passthrough of the SCTE\-35 messages – Not applicable\. SCTE\-35 messages are never included in this output\. 
++ Manifest decoration – Not supported because these outputs don't have manifests\. However, you can set up to include instructions in the sparse track\.
++ Blanking and blackout – Applicable\. Content in the output is blanked or blacked out if the features are enabled at the channel level\.
 
+Be careful of setting up so that you have the following combination:
++ You have you have not enabled sparse track\.
++ You have not enabled blanking and blackout\. 
 
-****  
-
-| SCTE\-35 Passthrough | Manifest Decoration | Blanking and Blackout | Effect | 
-| --- | --- | --- | --- | 
-| Not applicable \(SCTE\-35 messages are never included in output\) | Enabled | Yes or No | SCTE\-35 messages are removed from the video stream\. But instructions are included in the sparse track\. You could also implement blanking and blackout\. | 
-| Not applicable | Disabled | No | SCTE\-35 messages are removed from the output\. The sparse track doesn't include instructions\. Don't implement blanking or blackout because without SCTE\-35 messages in the video stream and without data in the sparse track, it will be impossible to find these blanks and blackouts programmatically in the output\. | 
+In this case, the video content that was marked by messages \(in the input\) is not marked \(in the output\)\. 
++ If you have the rights to that video content, there is no problem setting up this way\.
++ If you don't have the rights, it is impossible to find these blanks and blackouts programmatically in a Microsoft Smooth output\.

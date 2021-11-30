@@ -1,4 +1,4 @@
-# Deleting an Input Security Group<a name="delete-input-security-group"></a>
+# Deleting an input security group<a name="delete-input-security-group"></a>
 
  You can delete an input security group so long as it is not attached to any inputs\. 
 

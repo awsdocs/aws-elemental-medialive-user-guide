@@ -20,7 +20,7 @@ An *output* contains the encodes that belong together\. For example, one output 
 
 The output holds packaging instructions that apply to all the encodes in that output\. For example, the packaging instructions for a UDP output are different from those for an Archive output\. The encodes inside the outputs might be the same or different\. But the packaging instructions are different\.
 
-## Output Groups<a name="output-group"></a>
+## Output groups<a name="output-group"></a>
 
 An *output group* contains related outputs\. An output group might contain only one output or it might contain several outputs\. The output group holds details about the destination for all the outputs in that group\. 
 

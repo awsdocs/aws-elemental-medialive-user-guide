@@ -1,6 +1,6 @@
-# Creating a Channel by Cloning<a name="creating-channel-clone"></a>
+# Creating a channel by cloning<a name="creating-channel-clone"></a>
 
-You can clone a channel that is in the **Channels** list\. \(You can also clone a channel after choosing **Create channel**; for more information, see [Creating a Channel from a Template](creating-channel-template.md)\.\)
+You can clone a channel that is in the **Channels** list\. \(You can also clone a channel after choosing **Create channel**; for more information, see [Creating a channel from a template](creating-channel-template.md)\.\)
 
 **To create a channel by cloning \(console\)**
 

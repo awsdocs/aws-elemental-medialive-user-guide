@@ -1,4 +1,4 @@
-# Triggers for Blackout<a name="triggers-for-blackout"></a>
+# Triggers for blackout<a name="triggers-for-blackout"></a>
 
 The blackout feature is triggered only by time\_signal messages of segmentation type **Other**\. It is not triggered by splice\_insert messages of any segmentation type, and is not triggered by time\_signal messages of any type except **Other**\. 
 
@@ -7,7 +7,7 @@ SCTE\-35 messages of type ID "splice insert" and messages of type ID "time signa
 The segmentation ID triggers blackout based on “events,” as shown in the following table\.
 
 
-| SCTE\-35 Segmentation Type | Blacked out | 
+| SCTE\-35 segmentation type | Blacked out | 
 | --- | --- | 
 | Chapter Start | Start blacking out | 
 | Chapter End | End blacking out | 
@@ -24,11 +24,12 @@ Note that the triggers for blackout on a Network event are different from the ot
 + With Network, blanking starts when the Network *End* instruction is encountered\.
 + With other events, blanking starts when the "Event *Start*" instruction is encountered\.
 
-**End Event Trigger Hierarchy**  
+**End event trigger hierarchy**
+
 Events have the following "strength hierarchy\."
 
 
-| SCTE\-35 Segmentation Type | Strength | 
+| SCTE\-35 segmentation type | Strength | 
 | --- | --- | 
 | Network | 1 \(Strongest\) | 
 | Unscheduled Event | 2 | 

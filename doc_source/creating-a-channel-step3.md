@@ -1,4 +1,4 @@
-# Step 4: Complete the General Settings<a name="creating-a-channel-step3"></a>
+# Step 4: Complete the general settings<a name="creating-a-channel-step3"></a>
 
 AWS Elemental MediaLive has several *settings* that apply globally to all outputs\. MediaLive also has *features* that are optional but that apply globally to all outputs if they are enabled\.
 
@@ -12,23 +12,27 @@ These settings and features apply to all outputs\. Therefore, they appear on the
 
 1. When you have finished working with these fields, go to the [next step](creating-a-channel-step4.md)\.
 
-## Avail Blanking<a name="avail-blanking"></a>
+## Avail blanking<a name="avail-blanking"></a>
 
-Optional feature\. You can set this to blank out the output video during ad avails\. For more information, see [SCTE\-35 Message Processing](scte-35-message-processing.md)\.
+Optional feature\. You can set this to blank out the output video during ad avails\. For more information, see [SCTE\-35 message processing](scte-35-message-processing.md)\.
 
-## Avail Configuration<a name="scte35-handling"></a>
+## Avail configuration<a name="scte35-handling"></a>
 
-Optional feature\. You can modify the way that MediaLive handles SCTE\-35 ad avail messages, or you can keep the default behavior\. For information about the default behavior and how to modify that behavior, see [SCTE\-35 Message Processing](scte-35-message-processing.md) \.
+Optional feature\. You can modify the way that MediaLive handles SCTE\-35 ad avail messages, or you can keep the default behavior\. For information about the default behavior and how to modify that behavior, see [SCTE\-35 message processing](scte-35-message-processing.md)\.
 
-## Blackout Slate<a name="blackout-slate"></a>
+## Blackout slate<a name="blackout-slate"></a>
 
-Optional feature\. You can black out the output video as specified by program metadata, if that metadata is present in the input\. For more information, see [SCTE\-35 Message Processing](scte-35-message-processing.md) \.
+Optional feature\. You can black out the output video as specified by program metadata, if that metadata is present in the input\. For more information, see [SCTE\-35 message processing](scte-35-message-processing.md)\.
 
-## Global Configuration<a name="global-channel-settings"></a>
+## Feature activations<a name="channel-gen-feature-activ"></a>
+
+Optional features\. You can enable the input prepare feature for input switching\. For more information, see [Preparing inputs in AWS Elemental MediaLive](feature-prepare-input.md)\. 
+
+## Global configuration<a name="global-channel-settings"></a>
 
 Global configuration settings\. In this section, complete the first three fields as appropriate\. For details about each field, choose the **Info** link next to the field\. 
 
-## Global Configuration \- Input Loss Behavior<a name="input-loss-behavior"></a>
+## Global configuration \- Input loss behavior<a name="input-loss-behavior"></a>
 
 Global configuration settings\. The **Input Loss Behavior** fields change how MediaLive handles input loss\. 
 
@@ -38,13 +42,21 @@ When MediaLive detects that the input has not arrived within the expected time, 
 
 You can change this behavior: for **Input loss behavior**, choose **Input Loss Behavior**\. The default values are shown in the fields that appear\. Change the fields as needed\. 
 
-## Timecode Configuration<a name="timecode-config"></a>
+## Motion graphics configuration<a name="channel-config-mgi"></a>
 
-Global configuration settings\. This section lets you specify the timecode for the output\. This timecode does not have to be the same as the timecode that you specified for the input \. The input timecode fields are used to notify MediaLive what timecode is present in the input, so that MediaLive can find it, and read it or apply it correctly\. The output timecode fields are used to specify the timecode format that MediaLive must apply to the output\.
+Optional feature\. You can enable the motion graphics overlay feature\. For more information, see [Working with motion graphics overlays](feature-mgi.md)\. 
+
+## Nielsen configuration<a name="nielsen-configuration"></a>
+
+Optional feature\. You can configure a MediaLive channel to convert Nielsen watermarks to ID3 metadata\. For more information see [Converting Nielsen watermarks to ID3](feature-nielsen-id3.md)\.
+
+## Timecode configuration<a name="timecode-config"></a>
+
+Global configuration settings\. This section lets you specify the timecode for the output\. For more information about configuring the timecode, see [Timecode configuration](timecode.md)\.
 
 ## Logging<a name="channel-logging"></a>
 
-Optional feature\. You can enable logging of activity on this individual channel\. For detailed information about this feature, see [Monitoring Using Amazon CloudWatch Logs](monitoring-with-logs.md)\.
+Optional feature\. You can enable logging of activity on this individual channel\. For detailed information about this feature, see [Monitoring a channel using Amazon CloudWatch Logs](monitoring-with-logs.md)\.
 
 To enable logging, choose a log level other than **DISABLED**\. The levels are listed from least to most verbose\. 
 

@@ -1,4 +1,4 @@
-# IAM Role and ARN<a name="role-and-remember-arn"></a>
+# IAM role and ARN<a name="role-and-remember-arn"></a>
 
 This section describes how to complete the **IAM role** section in the **General info** section of the **Channel and input details** pane\.
 
@@ -9,14 +9,14 @@ This section on the MediaLive console is identical to the **IAM role** section o
 
 There are two general scenarios for choosing a role, depending on whether your organization has a designated administrator\.
 
-## Your Organization Has a Designated Administrator<a name="role-scenario-1"></a>
+## Your organization has a designated administrator<a name="role-scenario-1"></a>
 
 Your organization might have an administrator who manages this service\. That administrator has likely set up one or more roles: 
 + Ask the administrator or your manager which role to use\. Or if only one rule is listed in **Use existing role**, choose that role\. 
 + If the only rule that is listed is **MediaLiveAccessRole**, choose that role\. In addition, if the **Update** button is displayed beside this role name, choose the button\. \(The button does not always appear, but whenever it does appear, choose it to refresh the role\.\)
 + If you want the selected ARN to appear first in the list next time, select **Remember ARN**\. 
 
-## Your Organization Has No Administrator<a name="role-scenario-2"></a>
+## Your organization has no administrator<a name="role-scenario-2"></a>
 
 Your organization might not have a designated service administrator\. In this case, if none of your colleagues have set up a suitable role, you might have to create one yourself and then choose it\. 
 + You can create the default role, called **MediaLiveAccessRole**\. To first check if someone else has already created this role \(only one person needs to create it for all users in your AWS account\), look at **Create role from template**:

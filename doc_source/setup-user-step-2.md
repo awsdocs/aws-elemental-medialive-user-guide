@@ -1,4 +1,4 @@
-# Step 2: Identify Categories of Users<a name="setup-user-step-2"></a>
+# Step 2: Identify categories of users<a name="setup-user-step-2"></a>
 
 After you have identified the permissions that your users need, you must identify the different categories of users that you need\. You identify different categories based on the different operations they should be allowed to perform\. 
 
@@ -6,7 +6,7 @@ This requirements analysis must be performed by a person in your organization wh
 
 **To identify categories of users**
 
-1. Refer to the sections in [Step 1: Identify Requirements for Permissions for Users](setup-user-step-1.md), and decide whether all of your users should have the same permissions on all the services or whether some users should have one set of permissions while other users have another set\.
+1. Refer to the sections in [Step 1: Identify requirements for permissions for users](setup-user-step-1.md), and decide whether all of your users should have the same permissions on all the services or whether some users should have one set of permissions while other users have another set\.
 
 1. Group these different categories into, giving each category a name\. 
 
@@ -15,4 +15,4 @@ This requirements analysis must be performed by a person in your organization wh
 For example, perhaps you identify three categories of users:
 + Basic users –These users can start and stop channels and view metrics for channels, but have no write permissions\.
 + Read/write users – These users have nearly full permissions, but they can't create password parameters in AWS Systems Manager Parameter Store\.
-+ Advanced users – These users have full permissions on the services identified in [Step 1: Identify Requirements for Permissions for Users](setup-user-step-1.md)\. They are nearly as powerful as a restricted administrator, except that they can't set up users\.
++ Advanced users – These users have full permissions on the services identified in [Step 1: Identify requirements for permissions for users](setup-user-step-1.md)\. They are nearly as powerful as a restricted administrator, except that they can't set up users\.

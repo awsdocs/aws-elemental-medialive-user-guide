@@ -1,4 +1,4 @@
-# Purchasing a Reservation<a name="purchasing-reservations"></a>
+# Purchasing a reservation<a name="purchasing-reservations"></a>
 
 On the console, use the **Reservations** tab to purchase one or more reservations\. 
 
@@ -10,13 +10,17 @@ On the console, use the **Reservations** tab to purchase one or more reservation
 
 1. On the **Offerings** page, complete the **Filter offerings** section to filter for specific offerings\. For more information, see [ Filtering on the Offering Page](#filtering-offerings)\. 
 
-1. Choose an offering, and then choose **Add to cart**\. The **Cart** tab title in the upper\-left pane increments to show the total offerings currently in the cart\. \(To remove an offering that you added to the cart, switch to the **Cart** tab\.\)
+1. Choose an offering\.
+
+   If you are purchasing a reservation to target a specific output and that output has the framerate set to initialize from source, make sure that you purchase a reservation that specifies "30\-60fps"\. Don't purchase a reservation that specifies "<=30fps"\.
+
+1. Choose **Add to cart**\. The **Cart** tab title in the upper\-left pane increments to show the total offerings currently in the cart\. \(To remove an offering that you added to the cart, switch to the **Cart** tab\.\)
 
 1. To view the cart contents, choose the **Cart** tab\.
 
 1. To purchase all the offerings that are displayed on the **Cart** tab, choose **Purchase**\.
 
-## Filtering on the Offerings Page<a name="filtering-offerings"></a>
+## Filtering on the offerings page<a name="filtering-offerings"></a>
 
 The **Offerings** page shows the different reservations that you can purchase:
 + Input and output offerings, which are described as follows:

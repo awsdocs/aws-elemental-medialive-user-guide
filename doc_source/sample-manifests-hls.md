@@ -1,4 +1,4 @@
-# Sample Manifests \- HLS<a name="sample-manifests-hls"></a>
+# Sample manifests \- HLS<a name="sample-manifests-hls"></a>
 
 MediaLive supports the following HLS manifest styles for outputs:
 + Adobe
@@ -10,14 +10,14 @@ This section describes the ad marker tagging for each style of output manifest\.
 **Note**  
 MediaLive doesn't interpret the ad avail decoration information in the manifest attached to the input source\.
 
-## Ad Marker: Adobe<a name="sample-manifests-hls-adobe"></a>
+## Ad marker: Adobe<a name="sample-manifests-hls-adobe"></a>
 
-Inserts a CUE: DURATION for each ad avail\. Does not insert any CUE\-OUT CONT \(continuation tags\) to indicate to a player joining midbreak that there is a current avail\. This does not insert a CUE\-IN tag at the end of the avail\.
+Inserts a CUE: DURATION for each ad avail\. Does not insert any CUE\-OUT CONT \(continuation tags\) to indicate to a client player joining midbreak that there is a current avail\. This does not insert a CUE\-IN tag at the end of the avail\.
 
 **Structure**      
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/medialive/latest/ug/sample-manifests-hls.html)
 
-**Tag Contents**  
+**Tag contents**  
 + CUE:DURATION contains the following:
   + duration – Duration in fractional seconds
   + id – An identifier, unique among all ad avails CUE tags
@@ -31,13 +31,13 @@ This is the tag for an ad avail lasting 414\.171 PTS:
 #EXT-X-CUE:DURATION="201.467",ID="0",TYPE="SpliceOut",TIME="414.171"
 ```
 
-## Ad Marker: Elemental<a name="sample-manifests-hls-elemental"></a>
+## Ad marker: Elemental<a name="sample-manifests-hls-elemental"></a>
 
 **Structure**    
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/medialive/latest/ug/sample-manifests-hls.html)
 
-**Tag Contents**  
+**Tag contents**  
 + CUE\-OUT contains DURATION
 + CUE\-OUT\-CONT contains Elapsed time and Duration
 + CUE\-IN has no content
@@ -60,13 +60,13 @@ This is the tag for an ad avail lasting 414\.171 PTS:
 # EXT-X-CUE-IN
 ```
 
-## Ad Marker: SCTE\-35 Enhanced<a name="sample-manifests-hls-scte-35-enhanced"></a>
+## Ad marker: SCTE\-35 enhanced<a name="sample-manifests-hls-scte-35-enhanced"></a>
 
 Structure    
 ****    
 [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/medialive/latest/ug/sample-manifests-hls.html)
 
-Tag Contents  
+Tag contents  
 + OATCLS\-SCTE35 containing the base64 encoded raw bytes of the original SCTE\-35 ad avail message\.
 + ASSET containing the CAID or UPID as specified in the original SCTE35 message\.
 + 1 CUE\-OUT per ad avail\.

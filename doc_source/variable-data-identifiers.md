@@ -1,36 +1,41 @@
-# Reference: Identifiers for Variable Data<a name="variable-data-identifiers"></a>
+# Reference: identifiers for variable data<a name="variable-data-identifiers"></a>
 
-Identifiers for variable data are `$` codes that you can include in a field value to represent variable data\. Typically, the variable data \(for example, `$d$` for the date\) is resolved when you run the channel\. You can include them in any of the fields that make up part of the output destination:
-+ Destination in Output group
-+ Name modifier in Output
-+ Segment modifier in Output
-
-At runtime, the identifier is resolved to the appropriate data\. For example, `$dt$` resolves to a date and time\.
+Identifiers for variable data are `$` codes that you can include in a field value to represent variable data\. Typically, MediaLive resolves the variable data \(for example, `$dt$` for the date and time\) when you run the channel\. For example, `$dt$` resolves to the current date and time\.
 
 When you use these identifiers, make sure that the channel doesn't end up with two \(or more\) outputs with identical destinations\. If that happens, the channel passes validation upon creation, but fails on start\. 
+
+The following sections describe the variable identifiers that MediaLive supports, and the rules for where you can use these identifiers\.
+
+## Supported variable data<a name="supported-variable-identifiers"></a>
+
+MediaLive supports the variable data identifiers listed in the following table\. In each row, the first column specifies the string to enter in a field\. The second column specifies the format of the data after MediaLive has resolved the variable\. The third column describes the data\.
 
 
 | Identifier | Format | Description | 
 | --- | --- | --- | 
-| $dt$ | YYYYMMDDTHHMMSS | UTC date and time of the start time of the channel \(for all outputs except HLS\) or the date and time of each segment \(for HLS outputs\)\. | 
-|  $d$ | YYYYMMDD | UTC date of the start time of the channel \(for all outputs except HLS\) or the date and time of each segment \(for HLS outputs\)\. | 
-| $t$ | HHMMSS | Start time of the channel \(for all outputs except HLS\) or the time of each segment \(for HLS outputs\)\. | 
-| $rv$ | Kb | Video bit rate\. | 
-| $ra$ | Kb | Total of all audio bit rates in the output\. | 
-| $rc$ | Kb | Container bit rate for the output, or the sum of video and all audio bit rates for the output, if the container bit rate is not specified\. | 
+| $dt$ | YYYYMMDDTHHMMSS |  For HLS outputs, the UTC date and time of each segment\. For all other outputs, the UTC date and start time of the channel\.  | 
+|  $d$ | YYYYMMDD |  For HLS outputs, the UTC date and time of each segment\. For all other outputs, the UTC date when the channel starts\.  | 
+| $t$ | HHMMSS |  For HLS outputs, the UTC time of each segment\. For all other outputs, the UTC start time of the channel\.  | 
+| $rv$ | Kb | Video bitrate\. | 
+| $ra$ | Kb | Total of all audio bitrates in the output\. | 
+| $rc$ | Kb | Container bitrate for the output, or the sum of video and all audio bitrates for the output, if the container bitrate is not specified\. | 
 | $w$ | Pixels | Horizontal resolution\. | 
 | $h$ | Pixels | Vertical resolution\. | 
-| $f$ | Integer | FPS Framerate without decimal places\. For example, “23\.976” appears as “23”\. | 
+| $f$ | Integer | FPS frame rate without decimal places\. For example, “23\.976” appears as “23”\. | 
 | $$ | $ | Escaped $\. | 
+| $sn$ | Integer, fixed length | Number of the segment of the video in the output\.  | 
 | %0n | Padding modifier | Modifier for any data identifier\. The modifier pads the resolved value with leading zeros\. The format is%0n, where n is a number\. For example, to ensure the resolved value in the `$h$` identifier is 5 characters long, specify the identifier as `$h%05$`\. If the vertical resolution is “720”, then the resolved, padded value is “00720”\. | 
 
-The rules for which identifiers can be used in a specified destination field depend on the output type\.
+## Rules for using variable data<a name="rules-variable-identifiers"></a>
+
+This table describes where you can use the variable data identifiers from the previous table\. In each row, the first two columns specify where you can use identifiers\. The third column specifies which identifiers you can use in that location\.
 
 
-| Field | Applicable Output Types | Acceptable Identifiers | 
+| Object | Field | Acceptable Identifiers | 
 | --- | --- | --- | 
-| Destination in Output group | Archive, HLS, Microsoft Smooth | $dt$, $d$, $t$ | 
-| Name modifier in Output | Archive, Microsoft Smooth | All except $ra$ and $rc$ | 
-| Name modifier in Output | HLS | All | 
-| Segment modifier in Output | Archive, Microsoft Smooth | All except $ra$ and $rc$ | 
-| Segment modifier in Output | HLS | All | 
+| Channel – Archive, HLS, Microsoft Smooth output groups | Destination field in an Output group | $dt$, $d$, $t$ | 
+| Channel – Archive, Microsoft Smooth output groups | Name modifier field in an Output | All except $ra$, $rc$, $sn$  | 
+| Channel – HLS output groups | Name modifier field in an Output | All except $sn$  | 
+| Channel – Archive, Microsoft Smooth output groups | Segment modifier field in an Output | All except $ra$, $rc$, $sn$ | 
+| Channel – HLS output groups | Segment modifier field in an Output | All except $sn$ | 
+| Schedule – HLS ID3 Segment Tagging action | Tag field | All | 

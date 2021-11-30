@@ -1,10 +1,10 @@
-# Modify an Existing User<a name="setup-user-modify-user"></a>
+# Modify an existing user<a name="setup-user-modify-user"></a>
 
 If a user identity already exists for someone who will use AWS Elemental MediaLive, you can set them up for use in a production environment by modifying their user identity to make them a member of the relevant group \(in addition to the group or groups where they are already members\.\)
 
-You need to know the group that each user needs to belong to; see [Step 4: Create the Groups](setup-user-step-4.md)\.
+You need to know the group that each user needs to belong to; see [Step 4: Create the groups](setup-user-step-4.md)\.
 
-One situation in which it is very useful to modify an existing non\-administrator user is if you followed the procedures in [Setting Up AWS Elemental MediaLive](setting-up.md) to set up users for the period when you are experimenting with MediaLive\. Following that procedure, you created a policy called `MediaLiveAccessUser` and a group called `MediaLivePowerUsers.` You can now take away the broad permissions that you gave those users and "move" the users from the `MediaLivePowerUsers` group to one of the groups that you created in [Step 4: Create the Groups](setup-user-step-4.md)\. There is no need to delete these users and create them again\.
+One situation in which it is very useful to modify an existing non\-administrator user is if you followed the procedures in [Setting up: IAM permissions for AWS Elemental MediaLive](setting-up.md) to set up users for the period when you are experimenting with MediaLive\. Following that procedure, you created a policy called `MediaLiveAccessUser` and a group called `MediaLivePowerUsers.` You can now take away the broad permissions that you gave those users and "move" the users from the `MediaLivePowerUsers` group to one of the groups that you created in [Step 4: Create the groups](setup-user-step-4.md)\. There is no need to delete these users and create them again\.
 
 **To modify a user**
 

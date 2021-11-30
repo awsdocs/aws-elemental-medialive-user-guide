@@ -1,4 +1,4 @@
-# Step 10: Save the Channel<a name="creating-a-channel-step9"></a>
+# Step 9: Save the channel<a name="creating-a-channel-step9"></a>
 
 To save \(create\) the channel, choose **Create channel** in the navigation pane\. 
 

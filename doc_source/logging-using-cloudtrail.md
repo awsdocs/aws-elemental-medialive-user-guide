@@ -1,10 +1,10 @@
-# Logging MediaLive API Calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
+# Logging MediaLive API calls with AWS CloudTrail<a name="logging-using-cloudtrail"></a>
 
-AWS Elemental MediaLive is integrated with AWS CloudTrail, a service that provides a record of actions taken by a user, role, or an AWS service in MediaLive\. CloudTrail captures all API calls for MediaLive as events\. The calls captured include calls from the MediaLive console and code calls to the MediaLive API operations\. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for MediaLive\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\. Using the information collected by CloudTrail, you can determine the request that was made to MediaLive, the IP address from which the request was made, who made the request, when it was made, and additional details\. 
+AWS Elemental MediaLive is integrated with AWS CloudTrail, CloudTrail is service that provides a record of actions taken by a user, role, or an AWS service\. CloudTrail captures all API calls for MediaLive as events\. The calls captured include calls from the MediaLive console and code calls to the MediaLive API operations\. If you create a trail, you can enable continuous delivery of CloudTrail events to an Amazon S3 bucket, including events for MediaLive\. If you don't configure a trail, you can still view the most recent events in the CloudTrail console in **Event history**\. Using the information collected by CloudTrail, you can determine the request that was made to MediaLive, the IP address from which the request was made, who made the request, when it was made, and additional details\. 
 
 To learn more about CloudTrail, see the [AWS CloudTrail User Guide](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/)\.
 
-## MediaLive Information in CloudTrail<a name="medialive-info-in-cloudtrail"></a>
+## MediaLive information in CloudTrail<a name="medialive-info-in-cloudtrail"></a>
 
 CloudTrail is enabled on your AWS account when you create the account\. When activity occurs in MediaLive, that activity is recorded in a CloudTrail event along with other AWS service events in **Event history**\. You can view, search, and download recent events in your AWS account\. For more information, see [Viewing Events with CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)\. 
 
@@ -23,7 +23,7 @@ Every event or log entry contains information about who generated the request\. 
 
 For more information, see the [CloudTrail userIdentity Element](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html)\.
 
-## Understanding MediaLive Log File Entries<a name="understanding-medialive-entries"></a>
+## Understanding MediaLive log file entries<a name="understanding-medialive-entries"></a>
 
 A trail is a configuration that enables delivery of events as log files to an Amazon S3 bucket that you specify\. CloudTrail log files contain one or more log entries\. An event represents a single request from any source and includes information about the requested action, the date and time of the action, request parameters, and so on\. CloudTrail log files aren't an ordered stack trace of the public API calls, so they don't appear in any specific order\. 
 
@@ -54,7 +54,7 @@ The following example shows a CloudTrail log entry\. The example shows the entry
        “sources”: [],
        “roleArn”: “MediaLiveAccessRole”,
        “requestId”: “1111aaaa-9604-4459-a160-46a28ae166",
-       “name”: “live_studio_feed”,
+       “name”: “live-studio-feed”,
        “type”: “RTP_PUSH”,
        }
    },
@@ -62,7 +62,7 @@ The following example shows a CloudTrail log entry\. The example shows the entry
        “input”: {
            “arn”: “arn:aws:medialive:us-west-2:111122223333:input:7780651”,
            “id”: “7780651”,
-           “name”: “live_studio_feed”,
+           “name”: “live-studio-feed”,
            “type”: “RTP_PUSH”,
            “sources”: [],
            “destinations”: [

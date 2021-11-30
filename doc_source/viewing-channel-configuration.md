@@ -1,4 +1,4 @@
-# Viewing a Channel Configuration<a name="viewing-channel-configuration"></a>
+# Viewing a channel configuration<a name="viewing-channel-configuration"></a>
 
 You can view information about the configuration of a channel on the **Channel details** page on the AWS Elemental MediaLive console\. This page is useful for viewing information when the channel is running\. \(When a channel is running, you can't view details by choosing **Edit**\)\. 
 
@@ -6,7 +6,7 @@ You can view information about the configuration of a channel on the **Channel d
 
 1. Open the MediaLive console at [https://console\.aws\.amazon\.com/medialive/](https://console.aws.amazon.com/medialive/)\.
 
-1. In the navigation pane, choose **Channels**\. \(For information about the buttons on this page, see [Editing a Channel](editing-deleting-channel.md#editing-a-channel), [Starting, Stopping, and Pausing an AWS Elemental MediaLive Channel](starting-stopping-deleting-a-channel.md), and [Creating a Channel by Cloning](creating-channel-clone.md)\.\)
+1. In the navigation pane, choose **Channels**\. \(For information about the buttons on this page, see [Editing a channel](editing-deleting-channel.md#editing-a-channel), [Starting, stopping, and pausing an AWS Elemental MediaLive channel](starting-stopping-deleting-a-channel.md), and [Creating a channel by cloning](creating-channel-clone.md)\.\)
 
 1. To view more details about a channel, choose the name of that channel\. The **Channel details** page appears\. 
 

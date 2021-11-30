@@ -1,4 +1,4 @@
-# Viewing Purchased Reservations<a name="view-reservations"></a>
+# Viewing purchased reservations<a name="view-reservations"></a>
 
 On the console, you can view the reservations that you have purchased\. 
 

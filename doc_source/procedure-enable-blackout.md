@@ -1,4 +1,4 @@
-# Enabling Blackout<a name="procedure-enable-blackout"></a>
+# Enabling blackout<a name="procedure-enable-blackout"></a>
 
 Follow this procedure if you want to enable the blackout feature\.
 
@@ -14,17 +14,17 @@ Follow this procedure if you want to enable the blackout feature\.
 
 1. For **Ad avail offset**, set a value, if desired\. See the help for this field\.
 
-1. For **web\_delivery\_allowed\_flag** and **no\_regional\_blackout\_flag**, choose appropriate values\. For information about these fields, see [Triggers for Blackout](triggers-for-blackout.md)\.
+1. For **web\_delivery\_allowed\_flag** and **no\_regional\_blackout\_flag**, choose appropriate values\. For information about these fields, see [Triggers for blackout](triggers-for-blackout.md)\.
    + **Follow **\(default\): Observe the restriction and blank the content for the ad avail event\.
    + **Ignore**: Ignore the restriction and do *not* blank the content for the ad avail event\.
-**Warning**  
-Never set both fields to **Ignore**\.
+
+   Typically set both these fields to Follow\. For more information about what these fields do, see [Ad avail blanking restriction flags](ad-avail-blanking-restriction-flags.md)\.
 
 1. In **Blackout slate**, in **State**, choose **Enabled**\.
 
 1. For **Blackout slate image**, choose the appropriate value:
    + **Disable**: To use a plain black image for blackout\.
-   + **Avail blanking image**: To use a special image for blackout\. In the **URL** field, enter the path to a file in an Amazon S3 bucket\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password parameter for accessing the S3 bucket\. For information about this key, see [About the Feature for Creating Password Parameters](requirements-for-EC2.md#about-EC2Password)\.
+   + **Avail blanking image**: To use a special image for blackout\. In the **URL** field, enter the path to a file in an Amazon S3 bucket\. For integration with MediaLive, the bucket name mustn't use dot notation\. For example, `mycompany-videos` is acceptable but `mycompany.videos` isn't\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password parameter for accessing the S3 bucket\. For information about this key, see [About the feature for creating password parameters](requirements-for-EC2.md#about-EC2Password)\.
 
 1. If you want to enable network end blackout \(in other words, black out content when network transmission has ended and remove blackout only when network transmission resumes\), continue reading\. If you don't want to enable it, you have now finished setting up\. 
 
@@ -32,6 +32,6 @@ Never set both fields to **Ignore**\.
 
 1. For **Network end blackout image**, choose the appropriate value:
    + **Disable**: To use a plain black image for blackout\.
-   + **Network end blackout image**: To use a special image for network end blackout\. In the **URL** field, enter the path to a file in an Amazon S3 bucket\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password for accessing the S3 bucket\. See [About the Feature for Creating Password Parameters](requirements-for-EC2.md#about-EC2Password)\.
+   + **Network end blackout image**: To use a special image for network end blackout\. In the **URL** field, enter the path to a file in an Amazon S3 bucket\. For integration with MediaLive, the bucket name mustn't use dot notation\. For example, `mycompany-videos` is acceptable but `mycompany.videos` isn't\. The file must be of type \.bmp or \.png\. Also enter the user name and Systems Manager password for accessing the S3 bucket\. See [About the feature for creating password parameters](requirements-for-EC2.md#about-EC2Password)\.
 
 1. For **Additional settings**, in **Network ID**, type the EIDR ID of the network in the format 10\.nnnn/xxxx\- xxxx\- xxxx\- xxxx\-xxxx\-c \(case insensitive\)\. Only network end events with this ID will trigger blackout\.

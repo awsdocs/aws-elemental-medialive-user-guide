@@ -1,4 +1,4 @@
-# Deleting a Reservation<a name="deleting-reservations"></a>
+# Deleting a reservation<a name="deleting-reservations"></a>
 
 When a reservation has expired, you can delete the reservation from the list\.
 

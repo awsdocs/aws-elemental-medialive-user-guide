@@ -1,10 +1,10 @@
-# Option 1: Send all MediaLive Events to an Email Address<a name="option-1"></a>
+# Option 1: Send all MediaLive events to an email address<a name="option-1"></a>
 
 This option shows how to set up to send all events to a single email address\. The drawback of this setup is that the email account will receive a large volume of emails\. Therefore, we recommend that you don't use this setup in a production environment\. 
 
-You must perform the following procedure in each region where channels are running\.
+You must perform the following procedure in each Region where channels or multiplexes are running\.
 
-## Step 1: Create a Subscription<a name="option-1-1"></a>
+## Step 1: Create a subscription<a name="option-1-1"></a>
 
 Create a subscription to set up a specific email address so that it automatically receives email notifications when any event occurs in MediaLive\. You must identify an email recipient for the emails\.
 
@@ -42,7 +42,7 @@ In the following procedure, we use the example of "MediaLive\_alert" as the subj
 
 1. Log on to that email account, and display the email\. Choose the "Confirm subscription" link in the email to enable the subscription\. A confirmation window appears in a web browser\. You can close this window\.
 
-## Step 2: Create a Rule<a name="option-1-2"></a>
+## Step 2: Create a rule<a name="option-1-2"></a>
 
 You now create a rule in Amazon CloudWatch that says, "When CloudWatch receives any event from aws\.medialive, invoke the specified SNS topic\." In other words, you create a rule that sends an email to the subscribed email address\.
 

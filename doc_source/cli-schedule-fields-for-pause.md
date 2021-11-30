@@ -1,37 +1,36 @@
-# Payload for a Pause Pipeline Action<a name="cli-schedule-fields-for-pause"></a>
+# Pause pipeline action – payload<a name="cli-schedule-fields-for-pause"></a>
 
-For information about the meaning and values for the fields in the following JSON, see the [AWS Elemental MediaLive API Reference](https://docs.aws.amazon.com/medialive/latest/apireference/):
+For information about the meaning and values for the fields in the following JSON, see the [AWS Elemental MediaLive API Reference](https://docs.aws.amazon.com/medialive/latest/apireference/)\.
 
 ```
 {
-  "ChannelId": "8545690",
-  "Creates": {
-    "ScheduleActions": [
+ "ScheduleActions": [
+  {
+   "ScheduleActionStartSettings": {
+    "FixedModeScheduleActionStartSettings": {
+     "Time": "string"
+    },
+    "ImmediateModeScheduleActionStartSettings": {
+    }
+   },
+   "ActionName": "string",
+   "ScheduleActionSettings": {
+    "PauseStateSettings": {
+     "Pipelines": [
       {
-        "ScheduleActionStartSettings": {
-          "FixedModeScheduleActionStartSettings": {
-            "Time": "2019-03-10T20:42:19Z"
-          }
-        },
-        "ActionName": "pause_pipeline_0_now",
-        "ScheduleActionSettings": {
-          "PauseStateSettings": {
-            "Pipelines": [
-              {
-                "PipelineId": "PIPELINE_0"
-              }
-            ]
-          }
-        }
+       "PipelineId": "enum"
       }
-    ]
+     ]
+    }
+   }
   }
+ ]
 }
 ```
 
-## Example: Pausing One Pipeline<a name="json-pause-example"></a>
+## Example: Pausing one pipeline<a name="json-pause-example"></a>
 
-This example of a request pauses pipeline 0 at 20:42:19 UTC\. MediaLive always reads the command as "set the specified pipeline or pipelines to pause and set all other pipelines as unpaused\." 
+This example of a request pauses pipeline 0 at 20:42:19 UTC\. MediaLive always reads the command as:*set the specified pipeline or pipelines to pause and set all other pipelines to unpaused\.*
 
 ```
 {
@@ -44,7 +43,7 @@ This example of a request pauses pipeline 0 at 20:42:19 UTC\. MediaLive always r
             "Time": "2018-05-21T20:42:19Z"
           }
         },
-        "ActionName": "pause_pipeline_0_now",
+        "ActionName": "pause-pipeline-0-now",
         "ScheduleActionSettings": {
           "PauseStateSettings": {
             "Pipelines": [
@@ -60,32 +59,32 @@ This example of a request pauses pipeline 0 at 20:42:19 UTC\. MediaLive always r
 }
 ```
 
-## Example: Unpausing Both Pipelines<a name="json-unpause-example"></a>
+## Example: Unpausing both pipelines<a name="json-unpause-example"></a>
 
-This example of a request unpauses all pipelines that are currently paused\. Note that the `Pipelines` array is empty\. MediaLive interprets this empty array as "set all pipelines to unpaused":
+This example of a request unpauses all pipelines that are currently paused\. 
+
+**Note**  
+MediaLive always reads the command as:*set the specified pipeline or pipelines to pause and set all other pipelines to unpaused\.* In this example, the `Pipelines` array is empty\. MediaLive interprets this empty array as: *set all pipelines to unpaused*\.
 
 ```
 {
-  "ChannelId": "999999",
-  "Creates": {
-    "ScheduleActions": [
+ "ChannelId": "999999",
+ "Creates": {
+     "ScheduleActions": [
       {
-        "ScheduleActionStartSettings": {
-          "FixedModeScheduleActionStartSettings": {
-            "Time": "2018-05-21T20:52:00Z"
-          }
-        },
-        "ActionName": "unpause_pipeline_0",
-        "ScheduleActionSettings": {
-          "PauseStateSettings": {
-            "Pipelines": [
-              {
-              }
-            ]
-          }
-        }
-      }
-    ]
-  }
+       "ScheduleActionStartSettings": {
+         "ImmediateModeScheduleActionStartSettings": {}
+      },
+     "ActionName": "unpause-pipeline-0",
+     "ScheduleActionSettings": {
+       "PauseStateSettings": {
+         "Pipelines": [
+       {}
+      ]
+     }
+    }
+   }
+  ]
+ }
 }
 ```
