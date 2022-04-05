@@ -14,7 +14,7 @@ To view the channels that require maintenance, use the AWS Elemental MediaLive c
 
 **To view the channels that require maintenance \(Personal Health Dashboard\)**
 
-1. Open the AWS Personal Health Dashboard at [https://phd\.aws\.amazon\.com/phd/home\#/](https://phd.aws.amazon.com/phd/)\.
+1. Open the AWS Health Dashboard at [https://phd\.aws\.amazon\.com/phd/home\#/](https://phd.aws.amazon.com/phd/)\.
 
 1. In the navigation pane, choose **Dashboard**, and then select the **Other notifications** tab\.
 

@@ -23,15 +23,3 @@ Input switches in an input follow chain are grouped together starting from the t
 The actions are arranged in cards along a vertical axis\. The card titles are color\-coded by the action type\. For example, SCTE\-35 time\_signal messages are yellow\.
 
 One card might contain several input switches\. The first input switch is always a fixed\-type input switch\. The remaining input switches in that card are always follow\-type input switches\.
-
-**Window of time for the schedule**  
-The searchable window of time for the schedule extends to approximately one hour in the past\. Actions with a start time more than one hour in the past aren't displayed when you view the schedule on the console, and aren't included in the response to a `DescribeChannel` command\.
-
-However, a running action that is no longer visible continues to run for its full duration\. 
-
-The existence of this searchable window of time means the following:
-+ Actions that relate to input switching: There is no impact\.
-+ Actions that relate to image overlays: For actions to activate a static image overlay for a duration of time, the overlay might still be active, but it is no longer be possible to query MediaLive for the duration\.
-+ Actions that relate to motion graphics overlays: For actions to activate a motion graphics overlay for a duration of time, the overlay might still be active, but it is no longer be possible to query MediaLive for the duration\.
-+ Actions that relate to SCTE\-35: For messages that have a duration \(splice\_insert specified with a duration\), the message could still be active, but it is no longer possible to query MediaLive for the duration\. 
-+ Actions that relate to ID3 metadata: There is no impact\.

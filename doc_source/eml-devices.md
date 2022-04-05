@@ -8,7 +8,7 @@ The AWS Elemental Link hardware that's associated with the MediaLive device is t
 ![\[Image NOT FOUND\]](http://docs.aws.amazon.com/medialive/latest/ug/images\link-parts.png)
 
 To clarify the terminology:
-+ AWS Elemental Link is a physical hardware device\. For documentation for the hardware device, see [AWS Elemental Link](http://aws.amazon.com/https://aws.amazon.com//medialive/features/link)\.
++ AWS Elemental Link is a physical hardware device\. For documentation for the hardware device, see [AWS Elemental Link](http://aws.amazon.com/medialive/features/link/)\.
 + MediaLive device is the representation of AWS Elemental Link within MediaLive\. This section describes how to work with the MediaLive device\.
 + Elemental Link input is a type of input in MediaLive\. For information about working with an Elemental Link input, see [Setting up an AWS Elemental Link source](device-push-upstream.md)\.
 

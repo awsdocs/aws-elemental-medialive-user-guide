@@ -57,5 +57,4 @@ MediaLive and AWS Elemental Link work together as follows:
   When you set up inputs in this way, you are not replicating the MediaLive device\. There is still only one MediaLive device, but that device is the source for several separate inputs\.
 + You can attach up to two Elemental Link inputs to one channel\. Elemental Link inputs are push inputs, so each one counts towards your maximum number of push inputs in the channel\.
   + You can attach these two Elemental Link inputs to one standard channel in order to implement pipeline redundancy\.
-  + You can use these two Elemental Link inputs to implement [automatic input failover](automatic-input-failover.md)\.
   + You can include one or both of these Elemental Link inputs in a multiple\-input channel, as part of an [input switching workflow](scheduled-input-switching.md)\.

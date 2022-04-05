@@ -4,7 +4,7 @@ You can set up a multiple\-input channel with static and dynamic file inputs\. Y
 
 Using dynamic inputs lets you increase the number of video sources that you can use in the channel, while still observing the limit on the number of inputs that you can attach to the channel\.
 
-Only MP4 file inputs that are stored in one of the following locations can be set up as dynamic inputs:
+Only MP4 or Transport Stream \(TS\) file inputs that are stored in one of the following locations can be set up as dynamic inputs:
 + Amazon S3
 + AWS Elemental MediaStore
 

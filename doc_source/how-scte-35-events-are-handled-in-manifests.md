@@ -22,6 +22,7 @@ When manifest decoration or sparse track is enabled, MediaLive inserts up to thr
 | Provider advertisement | Yes | Yes |   | 
 | Distributor advertisement | Yes | Yes |   | 
 | Placement opportunity | Yes | Yes |   | 
+| Break | Yes | Yes |  | 
 | Other: Programs, Chapters, Network, Unscheduled | Yes |   | Yes | 
 
 
@@ -32,6 +33,7 @@ When manifest decoration or sparse track is enabled, MediaLive inserts up to thr
 | Provider advertisement | Yes | Yes |   | 
 | Distributor advertisement | Yes | Yes |   | 
 | Placement opportunity | Yes | Yes |   | 
+| Break | Yes | Yes |  | 
 | Other: Programs, Chapters, Network, Unscheduled | Yes |   | Yes | 
 
 For example, read the first line in the first table as follows: When a splice insert \(with no segmentation descriptor\) is encountered, the base64 and cue\-out, cue\-in information will be inserted in the manifest; blackout information will not be inserted\.
@@ -47,6 +49,7 @@ For example, read the first line in the first table as follows: When a splice in
 | Provider advertisement | Yes |   |   | 
 | Distributor advertisement | Yes |   |   | 
 | Placement opportunity | Yes |   |   | 
+| Break | Yes |  |  | 
 | Other: Programs, Chapters, Network, Unscheduled | Yes |   |   | 
 
 
@@ -57,6 +60,7 @@ For example, read the first line in the first table as follows: When a splice in
 | Provider advertisement | Yes |   |   | 
 | Distributor advertisement | Yes |   |   | 
 | Placement opportunity | Yes | Yes |   | 
+| Break | Yes | Yes |  | 
 | Other: Programs, Chapters, Network, Unscheduled | Yes |   | Yes | 
 
 For example, read the first line in the first table as follows: When a splice insert \(with no segmentation descriptor\) is encountered, the base64 information will be inserted in the manifest, and cue\-out, cue\-in information and blackout information will not be inserted\.

@@ -12,4 +12,14 @@ You must decide on the number of video encodes and their codecs\. Follow this pr
    + For most types of output groups, the downstream system dictates the codec for each video encode, so you obtained this information when you [identified the output encodes](#channel-planning-video-encodes)\. 
    + For an archive output group, you decide which codec suits your purposes\.
 
-1. Identify the resolution and bitrate for each video encode\. You might have obtained requirements or recommendations from your downstream system when you [identified the output encodes](#channel-planning-video-encodes)\. 
+1. Identify the resolution and bitrate for each video encode\. You might have obtained requirements or recommendations from your downstream system when you [identified the output encodes](#channel-planning-video-encodes)\.
+
+1. Identify the frame rates for each video encode\. If you are using more than one video encode, you can ensure compatibility by choosing output frame rates that are multiples of the lowest frame rate used\. 
+
+   Examples:
+   + 29\.97 and 59\.94 frames per second are compatible frame rates\.
+   + 15, 30, and 60 frames per second are compatible frame rates\.
+   + 29\.97 and 30 frames per second are *not* compatible frame rates\.
+   + 30 and 59\.94 frames per second are *not* compatible frame rates\. 
+
+    

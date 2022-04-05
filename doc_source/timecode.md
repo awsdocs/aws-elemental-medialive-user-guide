@@ -15,7 +15,7 @@ This section assumes that you are familiar with creating or editing a channel, a
 1. On the **Create Channel** page, in the **General settings** section, choose **Timecode configuration** 
 
 1. For **Source**, set the appropriate value: 
-   + **EMBEDDED** – Use the timecode in the source video\. If MediaLive doesn't find an embedded timecode in the source, it falls back to zero\-based timecode \(ZEROBASED\)\.
+   + **EMBEDDED** – Use the timecode in the source video\. If MediaLive doesn't find an embedded timecode in the source, it falls back to system clock timecode \(SYSTEMCLOCK\)\. If an embedded timecode is detected after you have started the channel, MediaLive will switch from the fall back system clock to the newly detected embedded timecode\.
    + **SYSTEMCLOCK**– Use the UTC time\. 
    + **ZEROBASED** – The time of the first frame in the output will be 00:00:00:00\.
 

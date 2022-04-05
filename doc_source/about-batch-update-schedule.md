@@ -2,6 +2,9 @@
 
 To create and delete actions in the schedule for a channel, you use the batch update schedule command\. This command lets you perform multiple actions in one request\. There isn't one command for creating actions and another for deleting actions\.
 
+**Important**  
+When working with a started and running channel, the **batch\-update\-schedule** command should be used when adding or removing actions\. Note that the **delete\-schedule** command should only be used on idle channels as it will delete all scheduled actions and could cause service interruptions if used on a live channel\. 
+
 You can use the command as follows:
 + Submit a *single* request such as a request to do the following:
   + Create one action\.

@@ -34,16 +34,18 @@ Note that HDR10 and HLG use the same color space\. They use different brightness
 
 ## How MediaLive supports the color space standards<a name="colorspace-support"></a>
 
-On the input side, MediaLive can read the metadata for all four color space standards\. On the output side, MediaLive can produce the color space \(including the metadata\) for three of the color space standards\. 
+On the input side, MediaLive can read the metadata for all four color space standards\. On the output side, MediaLive can produce the color space \(including the metadata\) for three of the color space standards\. MediaLive can pass through the color space in the input to the output for all four color space standards\.
+
+ 
 
 
 ****  
 
-|  Color space   |  MediaLive can read the information in the input?   |  MediaLive can produce the color space in the output  | 
-| --- | --- | --- | 
-|  601  |  Yes  |  Yes  | 
-|  709   |  Yes  |  Yes  | 
-|  HDR10   |  Yes  |  Yes  | 
-|  HLG  |  Yes  | No | 
+|  Color space   |  MediaLive can read the information in the input?   |  MediaLive can produce the color space in the output?  |  MediaLive can pass through the color space?  | 
+| --- | --- | --- | --- | 
+|  601  |  Yes  |  Yes  |  Yes  | 
+|  709   |  Yes  |  Yes  |  Yes  | 
+|  HDR10   |  Yes  |  Yes  |  Yes  | 
+|  HLG  |  Yes  | No |  Yes  | 
 
 MediaLive can't read the information in the input that comes from an AWS Elemental Link device\. But when you set up the input, you can specify the color space that applies\.

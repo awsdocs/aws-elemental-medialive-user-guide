@@ -36,7 +36,7 @@ To create a frame capture encode in an HLS output group, you create a special ty
 
 1. Choose **Audio 1** and choose **Remove audio** so that the container has only one encode \(a video encode\)\.
 
-**To set up the frame capture encode in a MediaPackage output group**
+**To set up the frame capture encode in aMediaPackage output group**
 
 To create a frame capture encode in a MediaPackage output group, you create a regular output and set its video codec to **Frame Capture**\.
 

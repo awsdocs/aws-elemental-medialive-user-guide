@@ -60,18 +60,18 @@ If the planned channel is a [standard channel](plan-redundancy.md), you must ens
    + The IDs of the VPC, two subnets, and the security groups that the Amazon VPC user gave you\.
    + The two endpoints \(URLs\) that MediaLive generated when you created the CDI input\. These endpoints are the addresses in the blue boxes in [the diagram after this procedure](#setup-result-cdi-vpc)\. These URLs each have a private IP address from the subnet range, and they specify port 5000\. For example: 
 
-     `10.99.39.23:5000`
+     `10.30.30.33:5000`
 
-     `192.0.2.54:5000`
+     `10.40.40.44:5000`
 
 1. Make sure that the operator sets up properly for a standard channel\. They must do the following:
    + Set up two output interfaces\. Set up one upstream system with one output interface in one of the subnets, and set up the other upstream system with one output interface in the other subnet\. These interfaces are the addresses in the purple boxes in [the diagram after this procedure](#setup-result-cdi-vpc)\.
    + Make sure that the two content sources are identical in terms of video resolution and bitrate\.
    + Push to the correct URLs on MediaLive\. For example, they must push to:
 
-     `10.99.39.23:5000`
+     `10.30.30.33:5000`
 
-     `192.0.2.54:5000`
+     `10.40.40.44:5000`
 
 **To set up for a single\-pipeline channel**
 
@@ -84,14 +84,14 @@ If the planned channel is a [single\-pipeline channel](plan-redundancy.md), you 
    + The IDs of the VPC, one of the subnets, and all of the security groups that the Amazon VPC user gave you\.
    + Only the first of the two endpoints \(URLs\) that MediaLive generated when you created the CDI input\. These endpoints are the addresses in the blue boxes in [the diagram after this procedure](#setup-result-cdi-vpc)\. The URL has a private IP address from the subnet range, and it specifies port 5000\. 
 
-     `10.99.39.23:5000`
+     `10.30.30.33:5000`
 
 1. Make sure that the operator sets up properly for a single\-pipeline channel\. They must:
    + Set up one upstream system\.
    + Set up one output interfaces\. The interface is the address in one of the purple boxes in [the diagram after this procedure](#setup-result-cdi-vpc)\.
    + Push to the correct URL on MediaLive\. For example, they must push to:
 
-     `10.99.39.23:5000`
+     `10.30.30.33:5000`
 
 ## Result of this procedure<a name="setup-result-cdi-vpc"></a>
 

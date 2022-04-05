@@ -5,6 +5,12 @@ The following table describes the documentation for this release of AWS Elementa
 
 | Change | Description | Date | 
 | --- |--- |--- |
+| [New AWS Elemental Link CloudWatch metrics](eml-metrics-input-devices.md) | AWS Elemental Link CloudWatch metrics section has been updated with new metrics relating to packet delivery\. | March 21, 2022 | 
+| [Frame rate compatibility](channel-planning-video-encodes.md) | The user guide has been updated with guidance for ensuring compatibility between frame rates\. | March 18, 2022 | 
+| [Removed single UHD output limitation](eml-limitations-and-rules.md#limits-outputs) | The user guide has been updated to remove the limitation of one UHD encode\. This limitation still applies when using a CDI input\. | February 28, 2022 | 
+| [AWS Elemental Link CloudWatch metrics](eml-metrics-input-devices.md) | AWS Elemental Link now supports CloudWatch metrics\. | January 21, 2022 | 
+| [Progam Date Time \(PDT\) Clock](hls-manifest-contents.md) | The list of configurable fields for HLS output manifests has been updated to include the new PDT clock source selector\. | January 7, 2022 | 
+| [Break segmentation type ID added](how-scte-35-events-are-handled-in-manifests.md) | Documentation for a Break segmentation type has been added to Splice insert and Timesignal APOS tables\. | December 8, 2021 | 
 | [Archive output HEVC support](outputs-supported-containers-and-codecs.md) | Archive outputs now support H\.265 \(HEVC\) codecs\. | November 22, 2021 | 
 | [SCTE\-35 input PID selection](scte-35-passthrough-or-removal.md) | AWS Elemental MediaLive now supports selecting a specific SCTE\-35 PID value from the input\. | November 19, 2021 | 
 | [Source video frame rate](inputs-video-audio-characteristics.md) | The user guide now clarifies that MediaLive only supports constant frame rates \(CFR\) on input\. Variable frame rates \(VFR\) are not supported\. | November 12, 2021 | 

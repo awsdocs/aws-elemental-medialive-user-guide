@@ -1,5 +1,7 @@
 # Global metrics<a name="eml-metrics-global"></a>
 
+Global metrics relate to general performance and information for AWS Elemental MediaLive\.
+
 ## Active alerts<a name="eml-metrics-active-alerts"></a>
 
 The total number of alerts that are active\.

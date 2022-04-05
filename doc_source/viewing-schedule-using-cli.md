@@ -2,7 +2,7 @@
 
 You can use the AWS CLI to view a list of the actions that are currently in the schedule for one channel:
 + Actions that have not yet been performed in the channel
-+ Actions that have been performed within the last hour 
++ Actions that have previously been performed 
 
 To view the schedule, use the `DescribeSchedule` command\. This command is represented differently in different interfaces:
 + In the AWS CLI, the command is `describe-schedule`\.

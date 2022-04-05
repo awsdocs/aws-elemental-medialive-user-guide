@@ -1,5 +1,7 @@
 # Output metrics<a name="eml-metrics-output-metrics"></a>
 
+Output metrics relate to the video and audio assets that have been processed by MediaLive as an output\.
+
 **Topics**
 + [Active outputs](#eml-metrics-active-outputs)
 + [Fill msec](#eml-metrics-fill)
@@ -31,7 +33,7 @@ A value of 0 means that fill frames aren't being used\. A non\-zero value means 
 The count is capped at 60,000 milliseconds \(1 minute\), which means that after the cap, the metric will be 60,000 until it drops to zero\. 
 
 Use this metric as follows:
-+ If you have automatic input failover enabled – This metric typically shows zero all the time, even when there is a failover\.  The channel fails over to the other input immediately, which means that there is no need for MediaLive to use fill frames\.
++ If you have automatic input failover enabled – This metric typically shows zero all the time, even when there is a failover\. The channel fails over to the other input immediately, which means that there is no need for MediaLive to use fill frames\.
 + If you don’t have automatic input failover enabled – A non\-zero value indicates that the input has failed, has been disrupted, or isn't keeping up with real time\.
 
 **Details:**

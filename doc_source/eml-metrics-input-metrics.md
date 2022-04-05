@@ -1,5 +1,7 @@
 # Input metrics<a name="eml-metrics-input-metrics"></a>
 
+Input metrics relate to the video and audio input assets that are presented to MediaLive\.
+
 **Topics**
 + [FEC row packets received](#eml-metrics-fec-row-received)
 + [FEC column packets received](#eml-metrics-fec-col-received)
@@ -140,6 +142,8 @@ This metric is useful if you have set up the automatic input failover feature wi
 
 The number of RTP packets that are lost in the incoming transmission\. *Lost *means packets that couldn't be recovered by FEC\. 
 
+This metric only applies to RTP input types\.
+
 Received packets \+ Recovered packets \+ Lost packets = Total expected for the period, if the period and dimensions for the three metrics are set identically for the three metrics\.
 
 These three RTP packet metrics are useful for monitoring the health of the input transmission\. If this metric is non\-zero, the first troubleshooting step is to look at the two [FEC metrics](#eml-metrics-fec-row-received), to determine whether FEC is functioning\. If FEC is functioning well, the next step is to investigate problems in the upstream network\.
@@ -162,6 +166,8 @@ Follow this guideline:
 ## RTP packets received<a name="eml-metrics-packets-received"></a>
 
 The number of RTP packets received in an RTP input\. This number includes the main RTP source \(port 5000\) and the FEC data \(ports 5002 and 5004\)\. 
+
+This metric only applies to RTP input types\.
 
 Received packets \+ Recovered packets \+ Lost packets = Total expected for the period, if the periods for the three metrics are set identically\.
 
@@ -186,6 +192,8 @@ Follow this guideline:
 
 The number of RTP packets recovered via FEC\.
 
+This metric only applies to RTP input types\.
+
 Received packets \+ Recovered packets \+ Lost packets = Total expected for the period, if the periods for the three metrics are set identically\.
 
 These three RTP packet metrics are useful for monitoring the health of the input transmission\.
@@ -207,7 +215,7 @@ Follow this guideline:
 
 ## UDP input loss seconds<a name="eml-metrics-udp-input-loss"></a>
 
-The number of seconds \(the *input loss period*\) for which the channel has not received packets from the RTP source\. Each datapoint has a value between 0 and 10 seconds\. 
+The number of seconds \(the *input loss period*\) for which the channel has not received packets from the source of an RTP or MediaConnect input\. Each datapoint has a value between 0 and 10 seconds\. 
 
 This metric is useful for monitoring the health of the input transmission\.
 

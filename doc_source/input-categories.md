@@ -21,6 +21,6 @@ Inputs can be categorized in several ways:
     Any input type can be set up as a static input\.
   + A dynamic input has a URL that includes a variable portion\. It is intended for use with input switching\. 
 
-    Only MP4 inputs can be set up as dynamic inputs\.
+    Only MP4 and Transport Stream \(TS\) inputs can be set up as dynamic inputs\.
 
   For more information, see [Input switching in AWS Elemental MediaLive](scheduled-input-switching.md)\.

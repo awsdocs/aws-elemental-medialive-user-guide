@@ -356,6 +356,7 @@ Amazon's trademarks and trade dress may not be used in
       + [Global metrics](eml-metrics-global.md)
       + [Input metrics](eml-metrics-input-metrics.md)
       + [Output metrics](eml-metrics-output-metrics.md)
+      + [Input device metrics](eml-metrics-input-devices.md)
       + [Pipeline locking metrics](eml-metrics-output-lock.md)
    + [Monitoring a channel or multiplex using Amazon CloudWatch Events](monitoring-via-cloudwatch.md)
       + [Option 1: Send all MediaLive events to an email address](option-1.md)
