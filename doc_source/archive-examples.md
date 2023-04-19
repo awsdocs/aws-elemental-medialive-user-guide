@@ -25,7 +25,7 @@ A given file is not visible in Amazon S3 while it is being written\. As soon as 
 
 ## Example 2<a name="archive-example-3"></a>
 
-You want to create an archive of highlights from the curling game that are also being streamed \(in a separate HLS output group\)\. You want to create three outputs: one that has audio languages for Europe, one for audio languages for Asia, and one for audio languages for Africa\. You want to store the outputs in the S3 buckets named **DOC\-EXAMPLE\-BUCKET1** and **DOC\-EXAMPLE\-BUCKET1**\. You want to break up the stream into 5 minute chunks\. 
+You want to create an archive of highlights from the curling game that are also being streamed \(in a separate HLS output group\)\. You want to create three outputs: one that has audio languages for Europe, one for audio languages for Asia, and one for audio languages for Africa\. You want to store the outputs in the S3 buckets named **DOC\-EXAMPLE\-BUCKET1** and **DOC\-EXAMPLE\-BUCKET2**\. You want to break up the stream into 5 minute chunks\. 
 
 
 | Field | Value | 
