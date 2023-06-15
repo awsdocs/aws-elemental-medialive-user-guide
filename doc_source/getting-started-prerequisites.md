@@ -1,3 +1,0 @@
-# Prerequisites<a name="getting-started-prerequisites"></a>
-
-Before you can use MediaLive, you need an AWS account and the appropriate permissions to access, create, and view MediaLive components\. Complete the steps in [Setting up: IAM permissions for AWS Elemental MediaLive](setting-up.md), and then return to this tutorial\. You can't use MediaLive, even as an administrator with full access, until you perform those steps\.

@@ -1,3 +1,0 @@
-# Creating a MediaLive device<a name="device-create"></a>
-
-You don't create MediaLive devices\. Instead, when an operator at the upstream system connects an AWS Elemental Link hardware to the internet and powers it on, AWS Elemental Link automatically connects to MediaLive\. On the MediaLive console, the **Devices** entry appears in the navigation pane\. The new MediaLive device appears in the **Input devices** section\. 
